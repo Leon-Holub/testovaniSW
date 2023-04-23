@@ -1,0 +1,15 @@
+Typ => TP
+ID => TP_009
+Název => Test range sliderů
+Popis => Testování pohyblivích sliderů pro volbu rozmezí 2 hodnot
+Testovací kroky =>
+	Klikneme na levý kruh u slideru pro volbu částky
+	Posuneme slider na částku 127 000 Kč -> hodnota na slideru se nastaví na 127000 Kč
+	Klikneme na pravý kruh u slideru pro volbu částky
+	Posuneme slider na částku 300 000 Kč -> hodnota na slideru se nastaví na 300000 Kč
+	Sjedeme do sekce "Výběr vozidel"
+Očekávaný výsledek =>
+	Zobrazí se nám pouze vozidla v rozmezí 127 000 Kč až 300 000 Kč (včetně).
+Vstupní data =>
+    Cena od = 127000
+    Cena do = 300000

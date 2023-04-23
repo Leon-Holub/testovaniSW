@@ -1,0 +1,10 @@
+Typ => TP
+ID => TP_021
+Název => Test odkazu na instagram
+Popis => Testování přesměrování na instagram autobazaru z hlavního menu
+Testovací kroky =>
+	Klikneme na tlačítko s třídou "fa-instagram"
+Očekávaný výsledek =>
+	V nové záložce se nám otevře instagramová stránka autobazaru "https://www.instagram.com/autobazar_drabek/"
+Vstupní data =>
+    Třída = fa-instagram

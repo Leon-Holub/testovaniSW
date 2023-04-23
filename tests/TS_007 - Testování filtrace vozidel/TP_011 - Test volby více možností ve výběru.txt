@@ -1,0 +1,14 @@
+Typ => TP
+ID => TP_011
+Název => Test volby více možností ve výběru
+Popis => Testování volby více možostí z předdefinovaných možností.
+Testovací kroky =>
+	Klikneme na výběrové políčko pro druh značku -> Zobrazí se výběr značek vozidel
+	Zvolíme BMW -> Skryje se výběr značek vozidel
+	Klikneme na výběrové políčko pro druh značku -> Zobrazí se výběr značek vozidel, políčko BMB má u sebe fajfku
+	Zvolíme značku Opel -> Skryje se výběr značek vozidel
+Očekávaný výsledek =>
+	Značka bude pouze Opel
+Vstupní data =>
+    Druh vozidla 1 = BMW
+    Druh vozidla 2 = Opel

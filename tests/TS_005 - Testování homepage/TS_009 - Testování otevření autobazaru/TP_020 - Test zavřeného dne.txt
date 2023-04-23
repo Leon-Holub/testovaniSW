@@ -1,0 +1,14 @@
+Typ => TP
+ID => TP_020
+Název => Test zavřeného dne
+Popis => Testování autobazaru ve dnech kdy je zavřený.
+Pre-conditions =>
+	Windows 11
+	Google Chrome – 110.0.5481.104
+	Windows 11, version 22H2
+	Nacházím se na stránce https://localhost/autobazarDrabek
+	Den je neděle
+Testovací kroky =>
+    Zobrazím si stránku
+Očekávaný výsledek =>
+	Ve vrchním menu bude text "Dnes máme zavřeno"

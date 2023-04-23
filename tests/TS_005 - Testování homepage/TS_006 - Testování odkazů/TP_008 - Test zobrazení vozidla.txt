@@ -1,0 +1,9 @@
+Typ => TP
+ID => TP_008
+Název => Test zobrazení vozidla
+Popis => Zobrazení vozu BMW X4 Xdrive35D 230KWS z hlavní stránky.
+Testovací kroky =>
+	Scrollujeme do sekce "TIPY NA VOZIDLA"
+	Klikneme na tlačítko "Více" u vozidla s názvem "BMW X4 Xdrive35D 230KWS"
+Očekávaný výsledek =>
+	Zobrazí se nám vozidlo a všechny popisky

@@ -1,0 +1,17 @@
+Typ => TP
+ID => TP_002
+Název => Přidání vozu přes výkup vozů – prázdný formulář
+Popis => Přidání vozu přes formulář pro výkup vozů. Formulář nebude obsahovat žádné data. Formulářovým prvkům navíc odstraníme vlastnosti pro požadování.
+Pre-conditions =>
+	Windows 11
+	Google Chrome – 110.0.5481.104
+	Windows 11, version 22H2
+	Nacházím se na stránce https://localhost/autobazarDrabek/www/cars/buyout
+	Pokud je uživatel přihlášený, tak se odhlásí a znovu načte stránku
+	V průzkumníku zrušíme všechny povinné inputy
+Testovací kroky =>
+	Sjedeme na spodek stránky a klikneme na odeslat.
+Post-conditions =>
+	Zavřeme prohlížeč
+Očekávaný výsledek =>
+	Znovunačtení stránky a zobrazení chybové hlášky.

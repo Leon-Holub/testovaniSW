@@ -1,0 +1,14 @@
+Typ => TP
+ID => TP_019
+Název => Test otevřeného dne
+Popis => Testování autobazaru ve dnech kdy je otevřený.
+Pre-conditions =>
+	Windows 11
+	Google Chrome – 110.0.5481.104
+	Windows 11, version 22H2
+	Nacházím se na stránce https://localhost/autobazarDrabek
+	Den je v rozmezí pondělí - pátek včetně
+Testovací kroky =>
+    Zobrazím si stránku
+Očekávaný výsledek =>
+	Ve vrchním menu bude text "Otevřeno 9:00 - 17:00"

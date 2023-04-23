@@ -1,0 +1,13 @@
+Typ => TS
+ID => TS_007
+Název => Testování filtrace vozidel
+Popis => V této sadě se věnujeme testování funkcí na při vyýběru vozidla.
+Datum => 12.4.2023
+Autor => Leon Holub
+Pre-conditions =>
+	Windows 11
+	Google Chrome – 110.0.5481.104
+	Windows 11, version 22H2
+	Nacházím se na stránce https://localhost/autobazarDrabek/vyhledavac-vozidel
+Post-conditions =>
+	Zavřeme prohlížeč

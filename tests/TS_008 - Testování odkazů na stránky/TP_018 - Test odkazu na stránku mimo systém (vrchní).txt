@@ -1,0 +1,10 @@
+Typ => TP
+ID => TP_018
+Název => Test odkazu na stránku mimo systém (vrchní)
+Popis => Zobrazení stránky, která se nachází mimo systém. Odkaz se nachází ve vrchním menu.
+Testovací kroky =>
+	Ve vrchním menu klikneme na odkaz s textem "Seznam"
+Očekávaný výsledek =>
+	V nové záložce se nám otevře web s adresou "První stránka" s adresou "https://www.seznam.cz/"
+Vstupní data =>
+    Text odkazu = Seznam

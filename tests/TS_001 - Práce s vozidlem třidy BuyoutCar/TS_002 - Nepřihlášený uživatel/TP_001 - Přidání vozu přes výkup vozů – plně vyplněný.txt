@@ -1,0 +1,38 @@
+Typ => TP
+ID => TP_001
+Název => Přidání vozu přes výkup vozů – plně vyplněný
+Popis => Přidání vozu přes formulář pro výkup vozů. Formulář bude plně vyplněný.
+Pre-conditions =>
+	Windows 11
+	Google Chrome – 110.0.5481.104
+	Windows 11, version 22H2
+	Nacházím se na stránce https://localhost/autobazarDrabek/www/cars/buyout
+	Pokud je uživatel přihlášený, tak se odhlásí a znovu načte stránku
+Testovací kroky =>
+	Vyplníme formulář vstupními daty.
+	Potvrdíme souhlas se zpracováním osobních údajů.
+	Formulář odešleme stisknutím tlačítka odeslat.
+Post-conditions =>
+	Zavřeme prohlížeč
+Očekávaný výsledek =>
+	Zapsání dat do databáze
+	Vytvoření složky pro obrázky konkrétního vozu
+	Uložení obrázků do vytvořené složky a zapsání místa do databáze
+	Oznámení uživateli o úspěšném zapsání
+Vstupní data =>
+    name = Leon
+    surname = Holub
+    phone_number = +420123456789
+    email = leonhol@seznam.cz
+    brand = Volvo
+    model = XC 90
+    manufacture_year = 2016
+    engine = 2,0 D5 173 KW
+    mileage = 102400
+    fuel_type = 1
+    VIN = YV1LC68BCH1135380
+    four_x_four = true
+    deduction = true
+    price = 799999
+    note = pohon 4x4, aut. převodovka, 8 rychlostních stupňů, 7x airbag, ABS
+    Soubor = <a target="_blank" href="$pathToImg/testFiles/carImage.jpg">carImage.jpg</a>

@@ -1,0 +1,13 @@
+Typ => TS
+ID => TS_006
+Název => Testování odkazů - homepage
+Popis => V této sadě se věnujeme testování funkčnosti hlavních odkazů na úvodní stránce.
+Datum => 9.4.2023
+Autor => Leon Holub
+Pre-conditions =>
+	Windows 11
+	Google Chrome – 110.0.5481.104
+	Windows 11, version 22H2
+	Nacházím se na stránce https://localhost/autobazarDrabek
+Post-conditions =>
+	Zavřeme prohlížeč

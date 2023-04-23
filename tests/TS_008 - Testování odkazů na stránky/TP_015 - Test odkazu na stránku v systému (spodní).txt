@@ -1,0 +1,11 @@
+Typ => TP
+ID => TP_015
+Název => Test odkazu na stránku v systému (spodní)
+Popis => Zobrazení stránky, vytvořené v systému a přidané ve spodním menu.
+Testovací kroky =>
+	Sjedeme na patičku stránky
+	Ve sloupečku odkazy klikneme na odkaz s textem "Název"
+Očekávaný výsledek =>
+	Budeme se nacházen na stránce "Název" s adresou "http://localhost/autobazarDrabek/stranka/nazev"
+Vstupní data =>
+    Text odkazu = Název

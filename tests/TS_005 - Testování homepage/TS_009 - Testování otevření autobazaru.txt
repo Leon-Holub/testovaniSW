@@ -1,0 +1,8 @@
+Typ => TS
+ID => TS_009
+Název => Testování otevření autobazaru
+Popis => V této sadě se věnujeme testování zda je bazar otevřený nebo zavřený.
+Datum => 23.4.2023
+Autor => Leon Holub
+Post-conditions =>
+	Zavřeme prohlížeč

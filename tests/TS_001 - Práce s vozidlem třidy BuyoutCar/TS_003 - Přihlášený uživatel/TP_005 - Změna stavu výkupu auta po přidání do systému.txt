@@ -1,0 +1,18 @@
+Typ => TP
+ID => TP_005
+Název => Změna stavu výkupu auta po přidání do systému
+Popis => Vůz přidaný v TP_001 jsme předělali z typu BuyoutCar na typ Car v TP_004. Nyní se vrátíme do výkupu vozů a pokusíme se stav „v systému“ změnit na stav „Akceptován“
+Pre-conditions =>
+	Windows 11
+	Google Chrome – 110.0.5481.104
+	Windows 11, version 22H2
+	Nacházím se na stránce https://localhost/autobazarDrabek/www/admin.buyout-cars/
+	Pokud není uživatel přihlášený, přihlásí se
+	Role uživatele musí být větší nebo rovna roli „uživatel“
+Testovací kroky =>
+	V tabulce si najdeme vůz z TP_001 (nachází se ve spodní části tabulky)
+	Klikneme na ikonu fajfky
+Post-conditions =>
+	Znovu načteme stránku
+	Očekávaný výsledek:
+	Zobrazení chybové hlášky

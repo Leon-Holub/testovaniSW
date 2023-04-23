@@ -1,0 +1,6 @@
+Typ => TS
+ID => TS_005
+Název => Testování homepage
+Popis => V této sadě se věnujeme testování funkcí na hlavní stránce.
+Datum => 9.4.2023
+Autor => Leon Holub

@@ -1,0 +1,13 @@
+Typ => TS
+ID => TS_008
+Název => Testování odkazů na stránky
+Popis => V této sadě se věnujeme testování stránek na webu. Přihlášený uživatel může vytvářet stránky a dávat je do meníčka. Stránky můžou fungovat také jako odkazy na jiný web. Tyto stránky a odkazy otestujeme.
+Datum => 17.4.2023
+Autor => Leon Holub
+Pre-conditions =>
+	Windows 11
+	Google Chrome – 110.0.5481.104
+	Windows 11, version 22H2
+	Nacházím se na stránce https://localhost/autobazarDrabek
+Post-conditions =>
+	Zavřeme prohlížeč

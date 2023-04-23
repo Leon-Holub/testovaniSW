@@ -1,0 +1,11 @@
+Typ => TP
+ID => TP_017
+Název => Test odkazu na stránku mimo systém (spodní)
+Popis => Zobrazení stránky, která se nachází mimo systém. Odkaz se nachází v patiččce.
+Testovací kroky =>
+	Sjedeme na patičku stránky
+	Ve sloupečku odkazy klikneme na odkaz s textem "Portu"
+Očekávaný výsledek =>
+	V nové záložce se nám otevře web s adresou "https://www.portu.cz/ucet/prihlasit-se/"
+Vstupní data =>
+    Text odkazu = Portu

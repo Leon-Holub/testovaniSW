@@ -1,0 +1,9 @@
+Typ => TP
+ID => TP_012
+Název => Test check boxů
+Popis => Testování zaškrtávacích políček při filtaci vozidel.
+Testovací kroky =>
+	Klikneme na text "Pohon 4x4" -> Zaškrtne se políčko vedle textu
+	Sjedeme do sekce "Výběr vozidel"
+Očekávaný výsledek =>
+	Zobrazí se nám pouze vozidla, která mají pohon 4x4.

@@ -1,0 +1,18 @@
+Typ => TP
+ID => TP_014
+Název => Test nesplněné kombinace filtrů
+Popis => Test nesplněné kombinace filtrů a zobrazení hlášky.
+Testovací kroky =>
+	Klikneme na výběrové políčko pro značku -> Zobrazí se výběr značky
+	Zvolíme BMW -> Skryje se výběr značky
+	Klikneme na pravý kruh u slideru pro volbu částky
+    Posuneme slider na hodnotu 200000 -> hodnota na slideru se nastaví na 200000 Kč
+    Klikneme na levý kruh u slideru pro volbu roku výroby
+    Posuneme slider na hodnotu 2019 -> hodnota na slideru se nastaví na 2011
+    Sjedeme do sekce "Výběr vozidel"
+Očekávaný výsledek =>
+	Zobrazí se text "NEBYLO NALEZENO VOZIDLO ODPOVÍDAJÍCÍ VAŠIM POŽADAVKŮM"
+Vstupní data =>
+    Značka = BMW
+    Cena do = 200000
+    Rok výroby od = 2019

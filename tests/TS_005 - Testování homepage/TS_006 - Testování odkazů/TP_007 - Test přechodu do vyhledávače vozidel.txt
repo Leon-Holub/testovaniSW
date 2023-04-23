@@ -1,0 +1,11 @@
+Typ => TP
+ID => TP_007
+Název => Test přechodu do vyhledávače vozidel
+Popis => Po načtení úvodní stánky klikneme na odkaz "Nabídka našich vozů". Zjistíme zda nás přenese na vyhledávač. Po načtení vyhledávače se vrátíme na úvodní stránku a zkusíme se na vyhledávač dostat přes odkaz v menu "Nabídka".
+Testovací kroky =>
+	Klikneme na tlačítko s textem "Nabídka našich vozů" -> očekávaný výsledek = nacházíme se na vyhledavac-vozidel
+	Klikneme na logo autobazaru -> očekávaný výsledek = nacházíme se na hl. stránce
+	Klikneme na text "Nabídka"
+Očekávaný výsledek =>
+	Všechny průběžné očekávané jsou splněny
+	Nacházíme se na stránce vyhledavac-vozidel
