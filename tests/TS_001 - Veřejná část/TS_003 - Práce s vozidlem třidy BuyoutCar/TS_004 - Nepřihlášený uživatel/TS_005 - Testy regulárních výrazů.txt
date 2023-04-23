@@ -1,5 +1,5 @@
 Typ => TS
-ID => TS_004
+ID => TS_005
 Název => Testy regulárních výrazů
 Popis => V této sadě se věnujeme testování správnosti regulárních výrazů ve formuláři pro výkup vodidla.
 Datum => 9.4.2023

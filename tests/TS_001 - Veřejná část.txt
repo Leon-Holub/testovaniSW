@@ -1,0 +1,12 @@
+Typ => TS
+ID => TS_001
+Název => Veřejná část
+Popis => V této sadě se věnujeme testování veřejné části webu.
+Datum => 23.4.2023
+Autor => Leon Holub
+Pre-conditions =>
+	Windows 11
+	Google Chrome – 110.0.5481.104
+	Windows 11, version 22H2
+Post-conditions =>
+	Zavřeme prohlížeč

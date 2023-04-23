@@ -1,5 +1,5 @@
 Typ => TS
-ID => TS_001
+ID => TS_003
 Název => Práce s vozidlem třídy BuyoutCar
 Popis => V této sadě se věnujeme testování funkcí pro vozy vytvořené přes formulář pro výkup vozů. Tyto vozy spadají do třídy BuyoutCar.
 Datum => 21.02.2023

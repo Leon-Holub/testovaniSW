@@ -1,5 +1,5 @@
 Typ => TS
-ID => TS_006
+ID => TS_008
 Název => Testování odkazů - homepage
 Popis => V této sadě se věnujeme testování funkčnosti hlavních odkazů na úvodní stránce.
 Datum => 9.4.2023

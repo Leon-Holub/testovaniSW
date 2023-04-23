@@ -1,5 +1,5 @@
 Typ => TS
-ID => TS_008
+ID => TS_011
 Název => Testování odkazů na stránky
 Popis => V této sadě se věnujeme testování stránek na webu. Přihlášený uživatel může vytvářet stránky a dávat je do meníčka. Stránky můžou fungovat také jako odkazy na jiný web. Tyto stránky a odkazy otestujeme.
 Datum => 17.4.2023

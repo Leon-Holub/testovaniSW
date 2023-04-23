@@ -1,5 +1,5 @@
 Typ => TS
-ID => TS_002
+ID => TS_004
 Název => Nepřihlášený uživatel
 Popis => V této sadě se věnujeme testování funkcí pro vozy vytvořené přes formulář pro výkup vozů z pohledu nepřihlášené osoby. Tato osoba může pouze vytvořit objekt. V testovací sadě testujeme tvorbu plně vyplněným formulářem, tvorbu, když formulář nevyplníme a správnost regulárních výrazů.
 Datum => 21.02.2023
