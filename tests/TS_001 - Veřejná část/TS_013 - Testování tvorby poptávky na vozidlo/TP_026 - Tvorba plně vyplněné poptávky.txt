@@ -1,0 +1,18 @@
+Typ => TP
+ID => TP_026
+Název => Tvorba plně vyplněné poptávky
+Popis => Plně vyplněný formulář pro poptávku
+Testovací kroky =>
+	Klikneme na tlačítko s textem "NEZÁVAZNÁ POPTÁVKA"
+	Vyplníme formulář vstupními daty
+	Klikneme na tlačítko odeslat
+Očekávaný výsledek =>
+	Budeme přesměrováni na stránku detailem naší poptávky
+	Na stránce budou všechny informace co hsme vyplnili.
+Vstupní data =>
+    Text tlačítka = NEZÁVAZNÁ POPTÁVKA
+    Jméno = Leon
+    Příjmení = Holub
+    Telefon = 123456789
+    E-mail = l_holub@utb.cz
+    Vaše zpráva = Dobrý den,<br> rád bych Vás požádal o nezávaznou nabídku na vozidlo CPI OPAI ELEKTRO SCOOTER.

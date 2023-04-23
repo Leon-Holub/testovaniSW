@@ -1,0 +1,17 @@
+Typ => TP
+ID => TP_037
+Název => Kontrola aktivity přidání vozu
+Popis => Zkontrolujeme zda sedí počet vytvořených vozů v kartě uživatele s počtem výskytů v tabulce přehled aut.
+Testovací kroky =>
+    Rozklikneme si kartu uživatele Leon Holub -> Přesměrování na stránku "https://localhost/autobazarDrabek/User/1"
+    Uložíme si počet přidaných vozidel
+    Klikneme na odkaz s textem "Výkup vozů" -> Přesměrování na stránku "https://localhost/autobazarDrabek/Cars"
+    Klikneme na ozubené kolečko
+    Klikneme na Autor
+	Spočítáme kolikrát se vyskytuje email uživatele
+Očekávaný výsledek =>
+	Počet zpracovaných výkupů na kartě uživatele je stejný jako počet výskytů emailu v tabulce.
+Vstupní data =>
+    Email = leonhol@seznam.cz
+    Jméno = Leon
+    Příjmení = Holub

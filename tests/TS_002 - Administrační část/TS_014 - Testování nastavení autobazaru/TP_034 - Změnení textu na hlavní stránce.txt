@@ -1,0 +1,15 @@
+Typ => TP
+ID => TP_034
+Název => Změna textu na hlavní stránce
+Popis => V nastavení přejdeme do části textů a upravíme text vytvořený v TP_033.
+Testovací kroky =>
+    Klikneme na odkaz s textem "Texty" -> Přesměrování na stránku "https://localhost/autobazarDrabek/Homepage/Texts"
+	Klikneme na tlačítko s ikonou tužky u id vytvořeného textu
+	Do textového pole vložíme text ze vstupních dat
+	Klikneme na uložit
+	Klikneme na logo autobazaru -> Přesměrování na stránku "https://localhost/autobazarDrabek/"
+	Scrolujeme do sekce "homepage-offers"
+Očekávaný výsledek =>
+	V sekci se nachází text ze vstupních dat.
+Vstupní data =>
+    text = Nový text

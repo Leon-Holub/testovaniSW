@@ -1,0 +1,11 @@
+Typ => TP
+ID => TP_029
+Název => Zrušení textu novinek
+Popis => V nastavení smažeme obsah textového pole novinek.
+Testovací kroky =>
+	Klikneme na File v editoru novinek
+	Klikneme na New document
+	Klikneme na tlačítko uložit
+	Klikneme na logo autobazaru -> Přesměrování na stránku "https://localhost/autobazarDrabek/"
+Očekávaný výsledek =>
+	Stránka neobsahuje třídu "homepage-news"

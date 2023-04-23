@@ -1,0 +1,17 @@
+Typ => TP
+ID => TP_036
+Název => Kontrola aktivity zpracování výkupů
+Popis => Zkontrolujeme zda sedí počet zpracovaných výkupů v kartě uživatele s počtem výskytů v tabulce výkupů.
+Testovací kroky =>
+    Rozklikneme si kartu uživatele Leon Holub -> Přesměrování na stránku "https://localhost/autobazarDrabek/User/1"
+    Uložíme si počet zpracovaných výkupů
+    Klikneme na odkaz s textem "Výkup vozů" -> Přesměrování na stránku "https://localhost/autobazarDrabek/Cars/Buyout"
+    Klikneme na ozubené kolečko
+    Klikneme na Naposledy změnil
+	Spočítáme kolikrát se vyskytuje email uživatele
+Očekávaný výsledek =>
+	Počet zpracovaných výkupů na kartě uživatele je stejný jako počet výskytů emailu v tabulce.
+Vstupní data =>
+    Email = leonhol@seznam.cz
+    Jméno = Leon
+    Příjmení = Holub

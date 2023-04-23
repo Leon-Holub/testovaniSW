@@ -1,0 +1,12 @@
+Typ => TP
+ID => TP_028
+Název => Tvorba nevyplněné poptávky
+Popis => Odeslání nevyplněného formuláře poptávky.
+Testovací kroky =>
+	Klikneme na tlačítko s textem "NEZÁVAZNÁ POPTÁVKA"
+	Klikneme na tlačítko odeslat
+Očekávaný výsledek =>
+	Objeví se 3 varování o povinnosti vyplnění pole
+	Formulář se neodešle
+Vstupní data =>
+    Text tlačítka = NEZÁVAZNÁ POPTÁVKA

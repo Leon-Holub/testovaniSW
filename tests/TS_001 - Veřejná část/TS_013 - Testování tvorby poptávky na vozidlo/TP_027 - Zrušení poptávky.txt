@@ -1,0 +1,15 @@
+Typ => TP
+ID => TP_027
+Název => Zrušení poptávky
+Popis => Po vytvoření poptávky ji chceme zrušit.
+Pre-conditions =>
+	Windows 11
+	Google Chrome – 110.0.5481.104
+	Windows 11, version 22H2
+	Nacházím se na stránce https://localhost/autobazarDrabek/poptavka/106/Leon-Holub
+Testovací kroky =>
+    Sjedeme na spodní část rekapitulace poptávky
+    Klikneme na tlačítko zrušit poptávku
+    Klikneme na Tlačítko s textem ANO
+Očekávaný výsledek =>
+	Zobrazí se text "Váš požadavek na výkup vozu byl úspěšně zrušen"

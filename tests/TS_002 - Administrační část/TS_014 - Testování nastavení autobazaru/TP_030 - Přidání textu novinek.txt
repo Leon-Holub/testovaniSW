@@ -1,0 +1,12 @@
+Typ => TP
+ID => TP_030
+Název => Přidání textu novinek
+Popis => V nastavení přidáme obsah textového pole novinek.
+Testovací kroky =>
+    Do textového editoru pro novinky vložíme text ze vstupních dat
+	Klikneme na tlačítko uložit
+	Klikneme na logo autobazaru -> Přesměrování na stránku "https://localhost/autobazarDrabek/"
+Očekávaný výsledek =>
+	Stránka obsahuje třídu "homepage-news" s textem, který jsme vložili.
+Vstupní data =>
+    text = #News – nějaké místo na novinky – například tam budu potřebovat psát dovolenou… nějaká omezení, novinky (nový vozík na půjčení , možná i dodávku budeme mít na půjčení atp) atp.,…

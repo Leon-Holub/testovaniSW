@@ -1,0 +1,12 @@
+Typ => TP
+ID => TP_035
+Název => Smazání textu na hlavní stránce
+Popis => V nastavení přejdeme do části textů a smažeme text vytvořený v TP_033.
+Testovací kroky =>
+    Klikneme na odkaz s textem "Texty" -> Přesměrování na stránku "https://localhost/autobazarDrabek/Homepage/Texts"
+	Klikneme na tlačítko s ikonou koše a názvem "Smazat" u id vytvořeného textu
+	Klikneme na ANO -> Zobrazí se text "Text byl úspěšne smazán"
+	Klikneme na logo autobazaru -> Přesměrování na stránku "https://localhost/autobazarDrabek/"
+	Scrolujeme do sekce "homepage-offers"
+Očekávaný výsledek =>
+	V sekci se nenachází text z TP_033

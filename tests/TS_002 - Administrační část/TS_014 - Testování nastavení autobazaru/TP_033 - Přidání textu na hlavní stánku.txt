@@ -1,0 +1,15 @@
+Typ => TP
+ID => TP_033
+Název => Přidání textu na hlavní stránku
+Popis => V nastavení přejdeme do části textů a přidáme nový textový blok na úvodní stránku.
+Testovací kroky =>
+    Klikneme na odkaz s textem "Texty" -> Přesměrování na stránku "https://localhost/autobazarDrabek/Homepage/Texts"
+	Klikneme na tlačítko + -> Přidá se input pro text a obrázek
+	Do textového pole přidáme text ze vstupních dat
+	Klikneme na tlačítko uložit
+	Klikneme na logo autobazaru -> Přesměrování na stránku "https://localhost/autobazarDrabek/"
+	Scrolujeme do sekce "homepage-offers"
+Očekávaný výsledek =>
+	V sekci se nachází nově vytvořený text
+Vstupní data =>
+    text = Lorem ipsum dolor sit amet, consectetur adipiscing elit.

@@ -1,0 +1,14 @@
+Typ => TP
+ID => TP_031
+Název =>  Změna otvírací doby
+Popis => V nastavení změníme otevírací dobu na všechny dny v týdnu.
+Testovací kroky =>
+    Do všech políček pro otevírací dobu dáme stejný čas ze vstupních dat
+	Klikneme na tlačítko uložit
+	Klikneme na logo autobazaru -> Přesměrování na stránku "https://localhost/autobazarDrabek/"
+	Klikneme na odkaz "kontakt" -> Přesměrování na stránku "https://localhost/autobazarDrabek/kontakt"
+Očekávaný výsledek =>
+	Ve vrchním menu bude text "Otevřeno 9:00 - 17:00"
+	Na pravé boční straně bude u všech dnů text "9:00 - 17:00"
+Vstupní data =>
+    Otevíraví doba = 9:00 - 17:00

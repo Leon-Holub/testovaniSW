@@ -1,0 +1,15 @@
+Typ => TS
+ID => TS_015
+Název => Testování Sledování činnosti
+Popis => V této sadě se věnujeme testování sledovačky... Systém loguje kdo co upravil a vytvořil a pouze administrátoři mohou tyto údaje vidět.
+Datum => 23.4.2023
+Autor => Leon Holub
+Pre-conditions =>
+    Windows 11
+    Google Chrome – 110.0.5481.104
+    Windows 11, version 22H2
+    Uživatel je přihlášený jako administrátor
+    Nacházíme se na stránce "https://localhost/autobazarDrabek/Users"
+Post-conditions =>
+    Odhlásíme se
+	Zavřeme prohlížeč
