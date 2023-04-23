@@ -1,0 +1,9 @@
+Typ => TP
+ID => TP_055
+Název => Test odkazu na místo
+Popis => Testování přesměrování na místo na mapě.
+Testovací kroky =>
+	Scrolujeme na footer stránky
+	Klikneme na mapu
+Očekávaný výsledek =>
+	V nové záložce se nám otevře stránka <a target="_blank" href="https://www.google.com/maps/place/Autobazar+Dr%C3%A1bek/@49.2766747,17.3850435,17z/data=!3m1!4b1!4m6!3m5!1s0x4713042aa111c49f:0x7586392a4b9e4f67!8m2!3d49.2766747!4d17.3850435!16s%2Fg%2F1v62gczv"> google map </a>

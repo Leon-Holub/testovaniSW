@@ -1,0 +1,9 @@
+Typ => TP
+ID => TP_056
+Název => Test odkazu na portfolio
+Popis => Testování přesměrování na portfolio autora.
+Testovací kroky =>
+	Scrolujeme na footer stránky
+	Klikneme na odkaz s textem "Leon Holub"
+Očekávaný výsledek =>
+	V nové záložce se nám otevře stránka https://www.leonholub.cz/portfolio/www/

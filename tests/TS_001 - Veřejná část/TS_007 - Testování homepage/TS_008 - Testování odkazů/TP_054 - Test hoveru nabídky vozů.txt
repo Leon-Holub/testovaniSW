@@ -1,0 +1,8 @@
+Typ => TP
+ID => TP_054
+Název => Test hoveru nabídky
+Popis => Testování funkčnosti hover efektu tlačítka na hlavní stránce.
+Testovací kroky =>
+	Najedeme myší na tlačítko "NABÍDKA NAŠICH VOZŮ"
+Očekávaný výsledek =>
+	Pozadí se nastaví na barvu #19214F
