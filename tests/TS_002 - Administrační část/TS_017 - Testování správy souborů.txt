@@ -1,0 +1,15 @@
+Typ => TS
+ID => TS_017
+Název => Testování správy souborů
+Popis => V této sadě se věnujeme testování správy souborů. V systému je možnost nahrávat soubory, které so mohou používat v emailech, nebo při tvorbě stránek.
+Datum => 23.4.2023
+Autor => Leon Holub
+Pre-conditions =>
+    Windows 11
+    Google Chrome – 110.0.5481.104
+    Windows 11, version 22H2
+    Uživatel je přihlášený
+    Nacházíme se na stránce "https://localhost/autobazarDrabek/Files"
+Post-conditions =>
+    Odhlásíme se
+	Zavřeme prohlížeč

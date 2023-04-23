@@ -1,0 +1,10 @@
+Typ => TP
+ID => TP_047
+Název => Smazání souboru
+Popis => Všechny soubory lze samozřejmě i smazat, to si vyzkoušíme zde.
+Testovací kroky =>
+    Klikneme na koš u souboru nahraném v <a href="http://localhost/testovaniAutobazaru/index.php?name=./tests/TS_002%20-%20Administra%C4%8Dn%C3%AD%20%C4%8D%C3%A1st/TS_017%20-%20Testov%C3%A1n%C3%AD%20spr%C3%A1vy%20soubor%C5%AF/TP_043%20-%20Nahr%C3%A1n%C3%AD%20soboru%20typu%20jpg.txt">TP_043</a> -> Otevře se modální okno
+    Klikneme na ANO
+Očekávaný výsledek =>
+	Na stránce se objeví text "Soubor byl úspěšně smazán! Pokud změnu nevidíte zkuste načíst stránku znovu"
+	Soubor se na stránce již nenachází

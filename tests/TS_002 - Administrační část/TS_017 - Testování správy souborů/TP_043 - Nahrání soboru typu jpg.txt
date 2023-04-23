@@ -1,0 +1,14 @@
+Typ => TP
+ID => TP_043
+Název => Nahrání souboru typu jpg
+Popis => Testování nahrávaní pouze jpg souborů.
+Testovací kroky =>
+    Klikneme na plus -> Otevře se modální okno
+    Klikneme na dropzone oblast
+    Zvolíme soubor ze vstupních dat -> Zobrazí se náhled obrázku
+    Klikneme na tlačítko nahrát
+    Klikneme na křížek -> Zavře se modální okno
+Očekávaný výsledek =>
+	Na stránce se nově nachází v sekci jpg obrázek ze vstupních dat.
+Vstupní data =>
+    Soubor = <a target="_blank" href="$pathToImg/uploadFiles/vozik.jpg">vozik.jpg</a>

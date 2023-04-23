@@ -1,0 +1,13 @@
+Typ => TP
+ID => TP_046
+Název => Změna názvu souboru
+Popis => Všechny soubory mají při nahrání nastavený původní název, to se dá ale změnit!
+Testovací kroky =>
+    Klikneme na soubor nahraný v <a href="http://localhost/testovaniAutobazaru/index.php?name=./tests/TS_002%20-%20Administra%C4%8Dn%C3%AD%20%C4%8D%C3%A1st/TS_017%20-%20Testov%C3%A1n%C3%AD%20spr%C3%A1vy%20soubor%C5%AF/TP_042%20-%20Nahr%C3%A1n%C3%AD%20soboru%20typu%20pdf.txt">TP_042</a> -> Otevře se modální okno
+    Do kolonky Název souboru vyplníme název ze vstupních dat
+    Klikneme na uložit -> Zobrazí se text "Změna byla uložena"
+    Klikneme na křížek
+Očekávaný výsledek =>
+	Na stránce je změněný název souboru.
+Vstupní data =>
+    Název souboru = Nový název

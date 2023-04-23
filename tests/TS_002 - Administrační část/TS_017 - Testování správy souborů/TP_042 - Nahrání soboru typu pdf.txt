@@ -1,0 +1,15 @@
+Typ => TP
+ID => TP_042
+Název => Nahrání souboru typu pdf
+Popis => Testování nahrávaní pouze pdf souborů.
+Testovací kroky =>
+    Klikneme na plus -> Otevře se modální okno
+    Klikneme na dropzone oblast
+    Zvolíme soubor ze vstupních dat
+    Klikneme na tlačítko nahrát
+    Klikneme na křížek
+Očekávaný výsledek =>
+	Zavře se modální okno
+	Na stránce se nově nachází v sekci pdf "Střídavé obvody 1a - Úvod".
+Vstupní data =>
+    Soubor = <a target="_blank" href="$pathToImg/uploadFiles/Střídavé obvody 1a - Úvod.pdf">Střídavé obvody 1a - Úvod.pdf</a>
