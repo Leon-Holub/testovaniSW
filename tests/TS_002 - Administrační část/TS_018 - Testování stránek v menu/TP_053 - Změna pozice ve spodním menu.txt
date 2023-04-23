@@ -1,0 +1,15 @@
+Typ => TP
+ID => TP_053
+Název => Změna pozice ve spodním menu
+Popis => Otestujeme změnu poice v tabulce. Po změně se na číslo, které v tabulce již je, se musí přehodit více čísel.
+Testovací kroky =>
+    Klikneme na odkaz "Spodní menu" -> Nacházíme se na stránce "https://localhost/autobazarDrabek/Navigation/Bottom"
+    Uložíme si číslo pozice na řádku s Názvem "Odkazeček"
+    Klikneme na číslo pozice na řádku s Názvem "Dlouhý název"
+    Nastavíme hondotu na pozici odkazečku
+    Klikneme mimo
+Očekávaný výsledek =>
+    Číslo poice Dlouhého názvu a Odkazečku se přehodí
+Vstupní data =>
+    Název1 = Dlouhý název
+    Název2 = Odkazeček

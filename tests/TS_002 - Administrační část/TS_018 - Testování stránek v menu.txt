@@ -1,0 +1,15 @@
+Typ => TS
+ID => TS_018
+Název => Testování stránek v menu
+Popis => V této sadě se věnujeme testování správy stránek v menu. Stránky se mohou nacházet ve vrchním, spodním nebo žádném menu. Dělí se na 2 typy - Stránka a odkaz.
+Datum => 23.4.2023
+Autor => Leon Holub
+Pre-conditions =>
+    Windows 11
+    Google Chrome – 110.0.5481.104
+    Windows 11, version 22H2
+    Uživatel je přihlášený
+    Nacházíme se na stránce "https://localhost/autobazarDrabek/Navigation"
+Post-conditions =>
+    Odhlásíme se
+	Zavřeme prohlížeč

@@ -1,0 +1,11 @@
+Typ => TP
+ID => TP_049
+Název => Kontrola generace slugu stránky
+Popis => Při vytváření stránky se musí napsat název. Název se pak automaticky převádí do Slugu (název bez háčku a čárek, místo mezer pomlčky).
+Testovací kroky =>
+    Klikneme na plus -> Přesměrování na stránku "https://localhost/autobazarDrabek/Page/Add"
+    Vlozíme název ze vstupních dat
+Očekávaný výsledek =>
+	Slug bude "Dlouhy-nazev"
+Vstupní data =>
+    Název = Dlouhý název

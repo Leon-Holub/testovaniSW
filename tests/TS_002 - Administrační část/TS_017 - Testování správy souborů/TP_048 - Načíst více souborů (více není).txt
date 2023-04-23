@@ -1,6 +1,6 @@
 Typ => TP
 ID => TP_048
-Název => Načíst více souborů (více není).txt
+Název => Načíst více souborů (více není)
 Popis => Soubory jsou kategorizovány a do menu se načítají postupně. Základ je 12 a uživatel si může nechat načíst další. Zde zkoušíme co se stane pokud další nejsou.
 Testovací kroky =>
     Klikneme na "Načíst další" v kategorii pdf

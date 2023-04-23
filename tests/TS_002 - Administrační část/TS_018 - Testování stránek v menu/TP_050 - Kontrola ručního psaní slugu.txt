@@ -1,0 +1,13 @@
+Typ => TP
+ID => TP_050
+Název => Kontrola ručního psaní slugu
+Popis => Slug může uživatel psát i vlastní, ale musí stále dodržovat pravidla.
+Testovací kroky =>
+    Klikneme na plus -> Přesměrování na stránku "https://localhost/autobazarDrabek/Page/Add"
+    Vlozíme název ze vstupních dat -> Slug bude "Dlouhy-nazev"
+    Změníme slug na slug ze vstupních dat
+Očekávaný výsledek =>
+	Zobrazí se varovný text "Slug se může skládat pouze z písmen anglické abecedy, čísel a pomlčky"
+Vstupní data =>
+    Název = Dlouhý název
+    Slug = Dlouhý název

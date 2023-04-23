@@ -1,0 +1,18 @@
+Typ => TP
+ID => TP_051
+Název => Vytvoření stránky
+Popis => Otestujeme základní vytvoření stránky a vložíme ho do spodního menu.
+Testovací kroky =>
+    Klikneme na plus -> Přesměrování na stránku "https://localhost/autobazarDrabek/Page/Add"
+    Vlozíme název ze vstupních dat -> Slug bude "Dlouhy-nazev"
+    Vyplníme zbytek formuláře podle vstupních dat
+    Klikneme na tlačítko Uložit -> Nacházme se na stránce "https://localhost/autobazarDrabek/Navigation"
+    Klikneme na oko v nově přidaném řádku
+Očekávaný výsledek =>
+    https://localhost/autobazarDrabek/stranka/Dlouhy-nazev
+Vstupní data =>
+    Název = Dlouhý název
+    Typ = Stránka
+    Obsah stránky = "Lorem ipsum Dolorot ahmed ..."
+    Pozice = Spodní
+    Stav = Publikováno
