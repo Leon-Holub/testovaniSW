@@ -1,0 +1,16 @@
+Typ => TS
+ID => TS_018
+Název => Testováno administrátorského bočního menu
+Popis => V této sadě se věnujeme testování bočního menu pro administrátory/editory.
+Datum => 23.4.2023
+Autor => Leon Holub
+Pre-conditions =>
+    Windows 11
+    Google Chrome – 110.0.5481.104
+    Windows 11, version 22H2
+    Uživatel je přihlášený
+    Administrátorský panel je otevřený
+    Nacházíme se na stránce "https://localhost/autobazarDrabek/"
+Post-conditions =>
+    Odhlásíme se
+	Zavřeme prohlížeč

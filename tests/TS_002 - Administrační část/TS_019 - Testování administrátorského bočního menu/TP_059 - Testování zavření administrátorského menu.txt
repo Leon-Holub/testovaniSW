@@ -1,0 +1,10 @@
+Typ => TP
+ID => TP_059
+Název => Testování zavření administrátorského menu
+Popis => Otestujeme funkčnost zavírání bočního menu.
+Testovací kroky =>
+    Kliknu na šipku s id "sideNavOpener"
+Očekávaný výsledek =>
+    Boční menu nepůjde vidět
+    Třída bočního menu se změní z "sidenav sidenav--opened" na "sidenav"
+    Třída obsahu stránky se změní z "position-relative bg-white mainContent--opened" na "position-relative bg-white"

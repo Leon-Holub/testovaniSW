@@ -1,0 +1,11 @@
+Typ => TP
+ID => TP_057
+Název => Kontrola počtu nevyyřízených poptávek
+Popis => Kontrola zda se schoduje počet nevyřízených poptávek jak v bočním menu, tak na nástěnce.
+Testovací kroky =>
+    Uložíme si počet poptávek se stavem "Nový"
+    Zkontrolujeme zda je v bočním menu u Poptávky stejný počet
+    Klikneme na "Nástěnka" -> Nacházíme se na srtánce "https://localhost/autobazarDrabek/Dashboard"
+    Zkontrolujeme počet nevyřízených poptávek vozidel
+Očekávaný výsledek =>
+	Všechny čísla se shodují.

@@ -1,0 +1,9 @@
+Typ => TP
+ID => TP_058
+Název => Testování hover efektu v administrátorském menu
+Popis => Otestujeme změnu barvy pozadí po hoveru na odkaz v meníčku pro administrátory
+Testovací kroky =>
+    Najedu myší na Nástěnka -> změní se barva textu na <span style="color:#b00a16">#b00a16</span>
+    Kliknu na Nástěnku
+Očekávaný výsledek =>
+    Odkaz na nástěnku bude mít pozadí <span style="background:#DC0D1B; color:white">#DC0D1B</span>

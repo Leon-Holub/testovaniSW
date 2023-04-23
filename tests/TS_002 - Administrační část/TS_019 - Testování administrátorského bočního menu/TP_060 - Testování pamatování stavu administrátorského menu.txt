@@ -1,0 +1,9 @@
+Typ => TP
+ID => TP_060
+Název => Testování pamatování stavu administrátorského menu
+Popis => Otestujeme zda si menu pamatuje že je zavřené i když načteme stránku znovu.
+Testovací kroky =>
+    Kliknu na šipku s id "sideNavOpener" -> Boční menu nepůjde vidět
+    Znovu načeme stránku
+Očekávaný výsledek =>
+    Boční menu nepůjde vidět
