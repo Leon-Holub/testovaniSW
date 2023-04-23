@@ -1,0 +1,11 @@
+Typ => TP
+ID => TP_040
+Název => Změna stavu tlačítkem
+Popis => Dalším způsobem jak změnit stav je pomocí tlačítek na boku - fajfku = přijat, křížek = zamítnuto.
+Testovací kroky =>
+    Klikneme na křížek na řádku s ID 104 -> Stav se nastaví na "Zamítnut"
+    Klikneme na fajfku na řádku s ID 104
+Očekávaný výsledek =>
+	Průběžné očekávané výsledky prošli
+	Stav je nastavený na "Přijat"
+	Číslo v kolečku u Poptávky se sníží o 1

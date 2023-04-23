@@ -1,0 +1,15 @@
+Typ => TS
+ID => TS_016
+Název => Testování správy poptávek
+Popis => V této sadě se věnujeme testování správy poptávek.
+Datum => 23.4.2023
+Autor => Leon Holub
+Pre-conditions =>
+    Windows 11
+    Google Chrome – 110.0.5481.104
+    Windows 11, version 22H2
+    Uživatel je přihlášený
+    Nacházíme se na stránce "https://localhost/autobazarDrabek/Cars/Requests"
+Post-conditions =>
+    Odhlásíme se
+	Zavřeme prohlížeč

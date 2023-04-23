@@ -1,0 +1,15 @@
+Typ => TP
+ID => TP_041
+Název => Změna stavu více poptávek
+Popis => V systému je možnost zaškrtnout více řádků a změnit u všech stav najednou.
+Testovací kroky =>
+    Zaklikneme checkbox na řádku s ID 104
+    Zaklikneme checkbox na řádku s ID 101
+    Zaklikneme checkbox na řádku s ID 102
+    Klikneme na výběr skupinové akce
+    Zaklikneme možnost "Přijmout" -> Zviditelní se tlačítko "Provést"
+    Klikneme na "Provést"
+Očekávaný výsledek =>
+	Průběžné očekávané výsledky prošli
+	Stavy u všech 3 se nastaví na "Přijat"
+	Číslo v kolečku u Poptávky se sníží o 3

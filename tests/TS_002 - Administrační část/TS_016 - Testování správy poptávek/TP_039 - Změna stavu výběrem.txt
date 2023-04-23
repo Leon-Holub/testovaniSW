@@ -1,0 +1,10 @@
+Typ => TP
+ID => TP_039
+Název => Změna stavu výběrem
+Popis => Stav lze změnit více způsoby, takovým hlavním, nejčastěji používaným je výběr ze selectu.
+Testovací kroky =>
+    Klikneme na tlačítko s textem "Nový" na řádku s ID 104 -> Otevře se nabídka stavů
+    Klikneme na stav "Přijat"
+Očekávaný výsledek =>
+	Na řádku s ID 104 bude stav "Přijat"
+	Číslo v kolečku u Poptávky se sníží o 1
