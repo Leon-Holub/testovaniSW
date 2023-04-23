@@ -1,0 +1,9 @@
+Typ => TS
+ID => TS_012
+Název => testování přihlášení do systému
+Popis => V této sadě se věnujeme testování příhlášení se do systému.
+Datum => 23.4.2023
+Autor => Leon Holub
+Post-conditions =>
+    Odhlásíme se
+	Zavřeme prohlížeč

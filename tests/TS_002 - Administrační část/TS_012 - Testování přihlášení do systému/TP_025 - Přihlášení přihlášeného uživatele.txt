@@ -1,0 +1,14 @@
+Typ => TP
+ID => TP_025
+Název => Přihlášení přihlášeného uživatele
+Popis => Přihlášení se do systému když je uživatel již přihlášen
+Pre-conditions =>
+	Windows 11
+	Google Chrome – 110.0.5481.104
+	Windows 11, version 22H2
+	Nacházím se na stránce https://localhost/autobazarDrabek/admin/sign-in
+	Uživatel <strong>je</strong> přihlášený
+Testovací kroky =>
+	Žádné
+Očekávaný výsledek =>
+	Systém nás po načtení stránky pro přihlášení automaticky přesměruje na stránku "https://localhost/autobazarDrabek/Dashboard"

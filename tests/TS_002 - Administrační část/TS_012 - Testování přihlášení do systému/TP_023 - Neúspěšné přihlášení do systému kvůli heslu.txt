@@ -1,0 +1,18 @@
+Typ => TP
+ID => TP_023
+Název => Neúspěšné přihlášení do systému kvůli heslu
+Popis => Přihlášení se do systému se špatným heslem.
+Pre-conditions =>
+	Windows 11
+	Google Chrome – 110.0.5481.104
+	Windows 11, version 22H2
+	Nacházím se na stránce https://localhost/autobazarDrabek/admin/sign-in
+	Uživatel <strong>není</strong> přihlášený
+Testovací kroky =>
+	Vyplníme formulář vstupními daty.
+	Klikneme na tlačítko Submit
+Očekávaný výsledek =>
+	Zobrazení danger textu "Email nebo heslo je špatně"
+Vstupní data =>
+    email = leonhol@seznam.cz
+    heslo = SpatneHeslo123

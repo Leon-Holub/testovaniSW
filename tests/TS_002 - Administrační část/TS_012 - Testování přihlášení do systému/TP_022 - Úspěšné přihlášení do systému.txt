@@ -1,0 +1,18 @@
+Typ => TP
+ID => TP_022
+Název => Úspěšné přihlášení do systému
+Popis => Přihlášení se do systému se správnými údaji.
+Pre-conditions =>
+	Windows 11
+	Google Chrome – 110.0.5481.104
+	Windows 11, version 22H2
+	Nacházím se na stránce https://localhost/autobazarDrabek/admin/sign-in
+	Uživatel <strong>není</strong> přihlášený
+Testovací kroky =>
+	Vyplníme formulář vstupními daty.
+	Klikneme na tlačítko Submit
+Očekávaný výsledek =>
+	Přesměrování na stránku "https://localhost/autobazarDrabek/Dashboard"
+Vstupní data =>
+    email = leonhol@seznam.cz
+    heslo = 1234567890a
