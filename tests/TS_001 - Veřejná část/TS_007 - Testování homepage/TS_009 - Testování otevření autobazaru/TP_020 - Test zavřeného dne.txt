@@ -1,4 +1,5 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_020
 Název => Test zavřeného dne
 Popis => Testování autobazaru ve dnech kdy je zavřený.

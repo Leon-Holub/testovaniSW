@@ -1,4 +1,5 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_021
 Název => Test odkazu na instagram
 Popis => Testování přesměrování na instagram autobazaru z hlavního menu

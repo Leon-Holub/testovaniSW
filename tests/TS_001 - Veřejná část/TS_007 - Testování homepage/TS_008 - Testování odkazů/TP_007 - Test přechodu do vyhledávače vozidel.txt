@@ -1,4 +1,5 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_007
 Název => Test přechodu do vyhledávače vozidel
 Popis => Po načtení úvodní stánky klikneme na odkaz "Nabídka našich vozů". Zjistíme zda nás přenese na vyhledávač. Po načtení vyhledávače se vrátíme na úvodní stránku a zkusíme se na vyhledávač dostat přes odkaz v menu "Nabídka".

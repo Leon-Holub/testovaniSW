@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.8.2 on win32)" generated="20230423 10:53:29.594" rpa="false" schemaversion="3">
+<suite id="s1" name="testovaniAutobazaru" source="C:\xampp\htdocs\testovaniAutobazaru">
+<suite id="s1-s1" name="robotTests" source="C:\xampp\htdocs\testovaniAutobazaru\robotTests">
+<suite id="s1-s1-s1" name="TS 001 - Veřejná část" source="C:\xampp\htdocs\testovaniAutobazaru\robotTests\TS_001 - Veřejná část">
+<suite id="s1-s1-s1-s1" name="TS 007 - Testování homepage" source="C:\xampp\htdocs\testovaniAutobazaru\robotTests\TS_001 - Veřejná část\TS_007 - Testování homepage">
+<suite id="s1-s1-s1-s1-s1" name="TS 008 - Testování odkazů" source="C:\xampp\htdocs\testovaniAutobazaru\robotTests\TS_001 - Veřejná část\TS_007 - Testování homepage\TS_008 - Testování odkazů">
+<suite id="s1-s1-s1-s1-s1-s1" name="TP 021 - Test odkazu na instagram" source="C:\xampp\htdocs\testovaniAutobazaru\robotTests\TS_001 - Veřejná část\TS_007 - Testování homepage\TS_008 - Testování odkazů\TP_021 - Test odkazu na instagram.robot">
+<test id="s1-s1-s1-s1-s1-s1-t1" name="Pre-conditions - Otevři prohlížeč a jdi na stránku" line="6">
+<kw name="Open browser and accept danger" library="main-settings-variables-keywords">
+<arg>${homeURL}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${google}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230423 10:53:29.812" level="INFO">Opening browser 'Chrome' to base url 'https://localhost/autobazarDrabek/'.</msg>
+<status status="PASS" starttime="20230423 10:53:29.812" endtime="20230423 10:53:31.129"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230423 10:53:31.129" endtime="20230423 10:53:31.262"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="details-button"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230423 10:53:31.265" level="INFO">Clicking element '//*[@id="details-button"]'.</msg>
+<status status="PASS" starttime="20230423 10:53:31.263" endtime="20230423 10:53:31.311"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="proceed-link"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230423 10:53:31.312" endtime="20230423 10:53:31.342"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="proceed-link"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230423 10:53:31.343" level="INFO">Clicking element '//*[@id="proceed-link"]'.</msg>
+<status status="PASS" starttime="20230423 10:53:31.342" endtime="20230423 10:53:31.394"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//div[@id="main"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230423 10:53:31.395" endtime="20230423 10:53:32.326"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230423 10:53:32.332" level="INFO">Current location is 'https://localhost/autobazarDrabek/'.</msg>
+<status status="PASS" starttime="20230423 10:53:32.326" endtime="20230423 10:53:32.332"/>
+</kw>
+<status status="PASS" starttime="20230423 10:53:29.812" endtime="20230423 10:53:32.333"/>
+</kw>
+<status status="PASS" starttime="20230423 10:53:29.811" endtime="20230423 10:53:32.334"/>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-t2" name="TP_021 - Test odkazu na instagram" line="9">
+<kw name="Wait and click" library="main-settings-variables-keywords">
+<arg>${selector-a-instagram}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230423 10:53:32.336" endtime="20230423 10:53:32.357"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230423 10:53:32.357" level="INFO">Clicking element '//i[@class="fa-brands fa-instagram"]/parent::a'.</msg>
+<status status="PASS" starttime="20230423 10:53:32.357" endtime="20230423 10:53:32.432"/>
+</kw>
+<status status="PASS" starttime="20230423 10:53:32.336" endtime="20230423 10:53:32.433"/>
+</kw>
+<kw name="Check Tab URL" library="main-settings-variables-keywords">
+<arg>${adresa-ig}</arg>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230423 10:53:32.446" level="INFO">${handles} = ['188252A3EBE4CAFAF0956FBC0727B4D1', '6188252B822EC8405CBFAE713ACEFDC8']</msg>
+<status status="PASS" starttime="20230423 10:53:32.434" endtime="20230423 10:53:32.446"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles[1]}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230423 10:53:32.446" endtime="20230423 10:53:32.506"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${location}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230423 10:53:34.970" level="INFO">Current location is 'https://www.instagram.com/autobazar_drabek/'.</msg>
+<status status="PASS" starttime="20230423 10:53:32.506" endtime="20230423 10:53:34.970"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles[0]}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230423 10:53:34.970" endtime="20230423 10:53:34.990"/>
+</kw>
+<status status="PASS" starttime="20230423 10:53:32.433" endtime="20230423 10:53:34.990"/>
+</kw>
+<status status="PASS" starttime="20230423 10:53:32.335" endtime="20230423 10:53:34.992"/>
+</test>
+<status status="PASS" starttime="20230423 10:53:29.625" endtime="20230423 10:53:34.995"/>
+</suite>
+<status status="PASS" starttime="20230423 10:53:29.623" endtime="20230423 10:53:35.000"/>
+</suite>
+<status status="PASS" starttime="20230423 10:53:29.621" endtime="20230423 10:53:35.003"/>
+</suite>
+<status status="PASS" starttime="20230423 10:53:29.618" endtime="20230423 10:53:35.005"/>
+</suite>
+<status status="PASS" starttime="20230423 10:53:29.616" endtime="20230423 10:53:35.007"/>
+</suite>
+<status status="PASS" starttime="20230423 10:53:29.596" endtime="20230423 10:53:35.010"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="testovaniAutobazaru">testovaniAutobazaru</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="robotTests">testovaniAutobazaru.robotTests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="TS 001 - Veřejná část">testovaniAutobazaru.robotTests.TS 001 - Veřejná část</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1" name="TS 007 - Testování homepage">testovaniAutobazaru.robotTests.TS 001 - Veřejná část.TS 007 - Testování homepage</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="TS 008 - Testování odkazů">testovaniAutobazaru.robotTests.TS 001 - Veřejná část.TS 007 - Testování homepage.TS 008 - Testování odkazů</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1" name="TP 021 - Test odkazu na instagram">testovaniAutobazaru.robotTests.TS 001 - Veřejná část.TS 007 - Testování homepage.TS 008 - Testování odkazů.TP 021 - Test odkazu na instagram</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

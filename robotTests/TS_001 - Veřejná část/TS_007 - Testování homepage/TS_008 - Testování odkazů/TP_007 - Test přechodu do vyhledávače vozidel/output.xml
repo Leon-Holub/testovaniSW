@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.8.2 on win32)" generated="20230423 10:20:56.157" rpa="false" schemaversion="3">
+<suite id="s1" name="testovaniAutobazaru" source="C:\xampp\htdocs\testovaniAutobazaru">
+<suite id="s1-s1" name="robotTests" source="C:\xampp\htdocs\testovaniAutobazaru\robotTests">
+<suite id="s1-s1-s1" name="TS 001 - Veřejná část" source="C:\xampp\htdocs\testovaniAutobazaru\robotTests\TS_001 - Veřejná část">
+<suite id="s1-s1-s1-s1" name="TS 007 - Testování homepage" source="C:\xampp\htdocs\testovaniAutobazaru\robotTests\TS_001 - Veřejná část\TS_007 - Testování homepage">
+<suite id="s1-s1-s1-s1-s1" name="TS 008 - Testování odkazů" source="C:\xampp\htdocs\testovaniAutobazaru\robotTests\TS_001 - Veřejná část\TS_007 - Testování homepage\TS_008 - Testování odkazů">
+<suite id="s1-s1-s1-s1-s1-s1" name="TP 007 - Test přechodu do vyhledávače vozidel" source="C:\xampp\htdocs\testovaniAutobazaru\robotTests\TS_001 - Veřejná část\TS_007 - Testování homepage\TS_008 - Testování odkazů\TP_007 - Test přechodu do vyhledávače vozidel.robot">
+<test id="s1-s1-s1-s1-s1-s1-t1" name="Pre-conditions - Otevři prohlížeč a jdi na stránku" line="6">
+<kw name="Open browser and accept danger" library="main-settings-variables-keywords">
+<arg>${homeURL}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${google}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230423 10:20:56.391" level="INFO">Opening browser 'Chrome' to base url 'https://localhost/autobazarDrabek/'.</msg>
+<status status="PASS" starttime="20230423 10:20:56.390" endtime="20230423 10:20:57.716"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230423 10:20:57.716" endtime="20230423 10:20:57.838"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="details-button"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230423 10:20:57.839" level="INFO">Clicking element '//*[@id="details-button"]'.</msg>
+<status status="PASS" starttime="20230423 10:20:57.838" endtime="20230423 10:20:57.888"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="proceed-link"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230423 10:20:57.888" endtime="20230423 10:20:57.920"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="proceed-link"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230423 10:20:57.921" level="INFO">Clicking element '//*[@id="proceed-link"]'.</msg>
+<status status="PASS" starttime="20230423 10:20:57.921" endtime="20230423 10:20:57.970"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//div[@id="main"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230423 10:20:57.970" endtime="20230423 10:20:58.868"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230423 10:20:58.875" level="INFO">Current location is 'https://localhost/autobazarDrabek/'.</msg>
+<status status="PASS" starttime="20230423 10:20:58.868" endtime="20230423 10:20:58.875"/>
+</kw>
+<status status="PASS" starttime="20230423 10:20:56.390" endtime="20230423 10:20:58.875"/>
+</kw>
+<status status="PASS" starttime="20230423 10:20:56.389" endtime="20230423 10:20:58.876"/>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-t2" name="TP_007 - Test přechodu do vyhledávače vozidel" line="9">
+<kw name="Wait and click" library="main-settings-variables-keywords">
+<arg>${selector-a-nabídkaNašichVozů}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230423 10:20:58.878" endtime="20230423 10:20:58.900"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230423 10:20:58.901" level="INFO">Clicking element '//a[normalize-space()='Nabídka našich vozů']'.</msg>
+<status status="PASS" starttime="20230423 10:20:58.900" endtime="20230423 10:20:59.191"/>
+</kw>
+<status status="PASS" starttime="20230423 10:20:58.878" endtime="20230423 10:20:59.191"/>
+</kw>
+<kw name="Wait Until Location Is" library="SeleniumLibrary">
+<arg>${adresa-vyhledavace}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" starttime="20230423 10:20:59.191" endtime="20230423 10:20:59.201"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${adresa-vyhledavace}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230423 10:20:59.207" level="INFO">Current location is 'https://localhost/autobazarDrabek/vyhledavac-vozidel'.</msg>
+<status status="PASS" starttime="20230423 10:20:59.202" endtime="20230423 10:20:59.207"/>
+</kw>
+<kw name="Wait and click" library="main-settings-variables-keywords">
+<arg>${selector-logo}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230423 10:20:59.208" endtime="20230423 10:20:59.229"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230423 10:20:59.230" level="INFO">Clicking element '//img[@alt='logo autobazaru']'.</msg>
+<status status="PASS" starttime="20230423 10:20:59.229" endtime="20230423 10:20:59.456"/>
+</kw>
+<status status="PASS" starttime="20230423 10:20:59.208" endtime="20230423 10:20:59.457"/>
+</kw>
+<kw name="Wait Until Location Is" library="SeleniumLibrary">
+<arg>${homeURL}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" starttime="20230423 10:20:59.457" endtime="20230423 10:20:59.463"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${homeURL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230423 10:20:59.469" level="INFO">Current location is 'https://localhost/autobazarDrabek/'.</msg>
+<status status="PASS" starttime="20230423 10:20:59.464" endtime="20230423 10:20:59.470"/>
+</kw>
+<kw name="Wait and click" library="main-settings-variables-keywords">
+<arg>${selector-a-nabídka}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230423 10:20:59.470" endtime="20230423 10:20:59.488"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230423 10:20:59.488" level="INFO">Clicking element '//a[normalize-space()='Nabídka']'.</msg>
+<status status="PASS" starttime="20230423 10:20:59.488" endtime="20230423 10:20:59.719"/>
+</kw>
+<status status="PASS" starttime="20230423 10:20:59.470" endtime="20230423 10:20:59.719"/>
+</kw>
+<kw name="Wait Until Location Is" library="SeleniumLibrary">
+<arg>${adresa-vyhledavace}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" starttime="20230423 10:20:59.719" endtime="20230423 10:20:59.723"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${adresa-vyhledavace}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230423 10:20:59.728" level="INFO">Current location is 'https://localhost/autobazarDrabek/vyhledavac-vozidel'.</msg>
+<status status="PASS" starttime="20230423 10:20:59.724" endtime="20230423 10:20:59.728"/>
+</kw>
+<status status="PASS" starttime="20230423 10:20:58.877" endtime="20230423 10:20:59.729"/>
+</test>
+<status status="PASS" starttime="20230423 10:20:56.191" endtime="20230423 10:20:59.731"/>
+</suite>
+<status status="PASS" starttime="20230423 10:20:56.189" endtime="20230423 10:20:59.734"/>
+</suite>
+<status status="PASS" starttime="20230423 10:20:56.186" endtime="20230423 10:20:59.736"/>
+</suite>
+<status status="PASS" starttime="20230423 10:20:56.185" endtime="20230423 10:20:59.739"/>
+</suite>
+<status status="PASS" starttime="20230423 10:20:56.183" endtime="20230423 10:20:59.741"/>
+</suite>
+<status status="PASS" starttime="20230423 10:20:56.160" endtime="20230423 10:20:59.743"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="testovaniAutobazaru">testovaniAutobazaru</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="robotTests">testovaniAutobazaru.robotTests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="TS 001 - Veřejná část">testovaniAutobazaru.robotTests.TS 001 - Veřejná část</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1" name="TS 007 - Testování homepage">testovaniAutobazaru.robotTests.TS 001 - Veřejná část.TS 007 - Testování homepage</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="TS 008 - Testování odkazů">testovaniAutobazaru.robotTests.TS 001 - Veřejná část.TS 007 - Testování homepage.TS 008 - Testování odkazů</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1-s1-s1" name="TP 007 - Test přechodu do vyhledávače vozidel">testovaniAutobazaru.robotTests.TS 001 - Veřejná část.TS 007 - Testování homepage.TS 008 - Testování odkazů.TP 007 - Test přechodu do vyhledávače vozidel</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

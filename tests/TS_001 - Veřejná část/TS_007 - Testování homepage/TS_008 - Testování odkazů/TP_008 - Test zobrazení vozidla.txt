@@ -1,4 +1,5 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_008
 Název => Test zobrazení vozidla
 Popis => Zobrazení vozu BMW X4 Xdrive35D 230KWS z hlavní stránky.

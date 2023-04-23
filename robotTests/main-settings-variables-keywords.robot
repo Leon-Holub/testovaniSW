@@ -11,6 +11,9 @@ ${selector-modal-acceptance-accept}  //a[contains(text(),"Ano")]
 
 ${selector-alert}  //div[@role="alert"]
 
+${selector-content}  //section[@class="content"]
+${selector-logo}  //img[@alt='logo autobazaru']
+
 
 *** Keywords ***
 Open browser and accept danger
@@ -44,7 +47,7 @@ Check if text is equal
     ${selectedText}=  Get Text    ${selector}
     Should Be Equal    ${selectedText}  ${text}
 
-Check If Text Is Without Non-Breakable Spaces
+Check If Text Is Equal Without Non-Breakable Spaces
     [Arguments]    ${selector}  ${text}
     ${element_text}=    Get Text    ${selector}
     ${element_text}=    Set Variable    ${element_text.replace(' ', '')}
@@ -58,7 +61,7 @@ Check Count Of Occurrences
 Element should be visible and contain
     [Arguments]    ${selector}  ${text}
     Element Should Be Visible    ${selector}
-    Check If Text Is Without Non-Breakable Spaces    ${selector}  ${text}
+    Check If Text Is Equal Without Non-Breakable Spaces    ${selector}  ${text}
 
 Wait and click
     [Arguments]    ${selector}
@@ -69,10 +72,17 @@ Set Focus and Wait
     [Arguments]    ${selector}
     Set Focus To Element    ${selector}
     Wait Until Element Is Visible    ${selector}
-    Sleep    0.2s
+    Sleep    0.5s
 
 Accept Modal Dialog
     Wait Until Element Is Visible    ${selector-modal-acceptance}
     Sleep    0.2s
     Wait And Click    ${selector-modal-acceptance-accept}
     Wait Until Element Is Not Visible    ${selector-modal-acceptance}
+
+Check Tab URL
+    [Arguments]    ${location}
+    ${handles} =    Get Window Handles
+    Switch Window    ${handles[1]}
+    Location Should Be    ${location}
+    Switch Window    ${handles[0]}

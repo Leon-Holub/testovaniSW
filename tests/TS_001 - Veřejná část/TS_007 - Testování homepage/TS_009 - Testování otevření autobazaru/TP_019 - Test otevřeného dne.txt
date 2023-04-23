@@ -1,4 +1,5 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_019
 Název => Test otevřeného dne
 Popis => Testování autobazaru ve dnech kdy je otevřený.

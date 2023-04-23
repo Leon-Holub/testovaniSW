@@ -12,4 +12,4 @@ TP_027 - Zrušení poptávky
     Click Link    ${selector-button-zrušitPoptávku}
     Accept Modal Dialog
     Set Focus And Wait    ${selector-alert}
-    Check If Text Is Without Non-Breakable Spaces    ${selector-alert}  ${message-request-cancel}
+    Check If Text Is Equal Without Non-Breakable Spaces    ${selector-alert}  ${message-request-cancel}
