@@ -143,6 +143,12 @@ $testSets = $manager->getTestSets($file);
 
                             echo '</table></div>';
                         }
+                        if (isset($data["Automatizované"])) {
+                            ?>
+                            <h4 class="mt-4 mb-3"><a target="_blank" href="<?php echo $data["robot"] ?>">.robot soubor</a></h4>
+                            <iframe class="" width="100%" height="400" src="<?php echo $data["robot"] ?>"></iframe>
+                            <?php
+                        }
                         ?>
                     </div>
                 </div>
@@ -209,6 +215,23 @@ $testSets = $manager->getTestSets($file);
 
                             echo '</ul></div>';
                         }
+                        if (isset($data["Automatizované"])) {
+                            ?>
+                            <div class="col-12 mt-4">
+                                <h3 class="position-relative">
+                                    Automatizace
+                                    <svg class="position-absolute end-0 top-0 mt-1 me-1" style="width: 30px"
+                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                        <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                        <path d="M320 0c17.7 0 32 14.3 32 32V96H472c39.8 0 72 32.2 72 72V440c0 39.8-32.2 72-72 72H168c-39.8 0-72-32.2-72-72V168c0-39.8 32.2-72 72-72H288V32c0-17.7 14.3-32 32-32zM208 384c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H208zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H304zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H400zM264 256a40 40 0 1 0 -80 0 40 40 0 1 0 80 0zm152 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80zM48 224H64V416H48c-26.5 0-48-21.5-48-48V272c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H576V224h16z"/>
+                                    </svg>
+                                </h3>
+                                <iframe width="100%" height="400" src="<?php echo $data["log"] ?>"></iframe>
+                                <iframe class="mt-4" width="100%" height="400"
+                                        src="<?php echo $data["report"] ?>"></iframe>
+                            </div>
+                            <?php
+                        }
                     }
 
                     ?>
@@ -267,7 +290,7 @@ $testSets = $manager->getTestSets($file);
                             <a class="card-body position-relative text-decoration-none btn btn-outline-primary p-3"
                                href="index.php?name=<?php echo $ts["path"] ?>">
                                 <h6 class="card-subtitle my-2 ms-3 position-absolute top-0 start-0"><?php echo $ts["ID"] ?></h6>
-                                <h6 class="card-subtitle my-2 me-3 position-absolute top-0 end-0"><?php echo $ts["testCases"]. " TP"?></h6>
+                                <h6 class="card-subtitle my-2 me-3 position-absolute top-0 end-0"><?php echo $ts["testCases"] . " TP" ?></h6>
                                 <h6 class="card-title mt-4 text-uppercase"><?php echo $ts["Název"] ?></h6>
                                 <p class="card-text"
                                    style="line-height: 1.5em; height: 4.5em; overflow: hidden; text-align: justify">

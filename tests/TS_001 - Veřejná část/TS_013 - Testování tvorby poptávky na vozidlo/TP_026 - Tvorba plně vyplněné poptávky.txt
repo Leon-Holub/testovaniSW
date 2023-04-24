@@ -1,4 +1,5 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_026
 Název => Tvorba plně vyplněné poptávky
 Popis => Plně vyplněný formulář pro poptávku
@@ -8,7 +9,7 @@ Testovací kroky =>
 	Klikneme na tlačítko odeslat
 Očekávaný výsledek =>
 	Budeme přesměrováni na stránku detailem naší poptávky
-	Na stránce budou všechny informace co hsme vyplnili.
+	Na stránce budou všechny informace co jsme vyplnili.
 Vstupní data =>
     Text tlačítka = NEZÁVAZNÁ POPTÁVKA
     Jméno = Leon

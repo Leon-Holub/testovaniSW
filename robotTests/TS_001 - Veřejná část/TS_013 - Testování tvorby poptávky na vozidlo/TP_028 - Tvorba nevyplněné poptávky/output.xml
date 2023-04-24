@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.8.2 on win32)" generated="20230424 18:44:18.840" rpa="false" schemaversion="3">
+<suite id="s1" name="testovaniAutobazaru" source="C:\xampp\htdocs\testovaniAutobazaru">
+<suite id="s1-s1" name="robotTests" source="C:\xampp\htdocs\testovaniAutobazaru\robotTests">
+<suite id="s1-s1-s1" name="TS 001 - Veřejná část" source="C:\xampp\htdocs\testovaniAutobazaru\robotTests\TS_001 - Veřejná část">
+<suite id="s1-s1-s1-s1" name="TS 013 - Testování tvorby poptávky na vozidlo" source="C:\xampp\htdocs\testovaniAutobazaru\robotTests\TS_001 - Veřejná část\TS_013 - Testování tvorby poptávky na vozidlo">
+<suite id="s1-s1-s1-s1-s1" name="TP 028 - Tvorba nevyplněné poptávky" source="C:\xampp\htdocs\testovaniAutobazaru\robotTests\TS_001 - Veřejná část\TS_013 - Testování tvorby poptávky na vozidlo\TP_028 - Tvorba nevyplněné poptávky.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="Pre-conditions - Otevři prohlížeč a jdi na stránku" line="6">
+<kw name="Open browser and accept danger" library="main-settings-variables-keywords">
+<arg>${homeURL}${adresaTvorbyPoptavky}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${google}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230424 18:44:19.054" level="INFO">Opening browser 'Chrome' to base url 'https://localhost/autobazarDrabek/detail-vozu/32'.</msg>
+<status status="PASS" starttime="20230424 18:44:19.053" endtime="20230424 18:44:20.656"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230424 18:44:20.656" endtime="20230424 18:44:20.786"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="details-button"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230424 18:44:20.787" level="INFO">Clicking element '//*[@id="details-button"]'.</msg>
+<status status="PASS" starttime="20230424 18:44:20.787" endtime="20230424 18:44:20.831"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="proceed-link"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230424 18:44:20.831" endtime="20230424 18:44:20.858"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="proceed-link"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230424 18:44:20.859" level="INFO">Clicking element '//*[@id="proceed-link"]'.</msg>
+<status status="PASS" starttime="20230424 18:44:20.858" endtime="20230424 18:44:20.910"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//div[@id="main"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230424 18:44:20.911" endtime="20230424 18:44:21.746"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230424 18:44:21.751" level="INFO">Current location is 'https://localhost/autobazarDrabek/detail-vozu/32'.</msg>
+<status status="PASS" starttime="20230424 18:44:21.746" endtime="20230424 18:44:21.751"/>
+</kw>
+<status status="PASS" starttime="20230424 18:44:19.053" endtime="20230424 18:44:21.751"/>
+</kw>
+<status status="PASS" starttime="20230424 18:44:19.052" endtime="20230424 18:44:21.752"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t2" name="TP_028 - Tvorba nevyplněné poptávky" line="9">
+<kw name="Wait and click" library="main-settings-variables-keywords">
+<arg>${selector-button-poptavka}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230424 18:44:21.755" endtime="20230424 18:44:21.775"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230424 18:44:21.776" level="INFO">Clicking element '//button[contains(span, 'Nezávazná poptávka')]'.</msg>
+<status status="PASS" starttime="20230424 18:44:21.776" endtime="20230424 18:44:21.816"/>
+</kw>
+<status status="PASS" starttime="20230424 18:44:21.754" endtime="20230424 18:44:21.816"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector-modal}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230424 18:44:21.817" endtime="20230424 18:44:22.264"/>
+</kw>
+<kw name="Wait and click" library="main-settings-variables-keywords">
+<arg>${selector-button-send}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230424 18:44:22.266" endtime="20230424 18:44:22.287"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230424 18:44:22.287" level="INFO">Clicking element '//input[@name='send']'.</msg>
+<status status="PASS" starttime="20230424 18:44:22.287" endtime="20230424 18:44:22.341"/>
+</kw>
+<status status="PASS" starttime="20230424 18:44:22.265" endtime="20230424 18:44:22.342"/>
+</kw>
+<kw name="Element should be visible and contain" library="main-settings-variables-keywords">
+<arg>${selector-error-name}</arg>
+<arg>${message-error}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230424 18:44:22.372" level="INFO">Element '//span[@id='frm-carRequestForm-name_message']' is displayed.</msg>
+<status status="PASS" starttime="20230424 18:44:22.343" endtime="20230424 18:44:22.372"/>
+</kw>
+<kw name="Check If Text Is Without Non-Breakable Spaces" library="main-settings-variables-keywords">
+<arg>${selector}</arg>
+<arg>${text}</arg>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${element_text}</var>
+<arg>${selector}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230424 18:44:22.399" level="INFO">${element_text} =   Toto pole je povinné.</msg>
+<status status="PASS" starttime="20230424 18:44:22.373" endtime="20230424 18:44:22.399"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${element_text}</var>
+<arg>${element_text.replace(' ', '')}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230424 18:44:22.401" level="INFO">${element_text} = Totopolejepovinné.</msg>
+<status status="PASS" starttime="20230424 18:44:22.400" endtime="20230424 18:44:22.401"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${element_text}</arg>
+<arg>${text.replace(' ', '')}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230424 18:44:22.401" endtime="20230424 18:44:22.402"/>
+</kw>
+<status status="PASS" starttime="20230424 18:44:22.372" endtime="20230424 18:44:22.403"/>
+</kw>
+<status status="PASS" starttime="20230424 18:44:22.342" endtime="20230424 18:44:22.403"/>
+</kw>
+<kw name="Element should be visible and contain" library="main-settings-variables-keywords">
+<arg>${selector-error-surname}</arg>
+<arg>${message-error}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230424 18:44:22.447" level="INFO">Element '//span[@id='frm-carRequestForm-surname_message']' is displayed.</msg>
+<status status="PASS" starttime="20230424 18:44:22.403" endtime="20230424 18:44:22.447"/>
+</kw>
+<kw name="Check If Text Is Without Non-Breakable Spaces" library="main-settings-variables-keywords">
+<arg>${selector}</arg>
+<arg>${text}</arg>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${element_text}</var>
+<arg>${selector}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230424 18:44:22.484" level="INFO">${element_text} =   Toto pole je povinné.</msg>
+<status status="PASS" starttime="20230424 18:44:22.448" endtime="20230424 18:44:22.484"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${element_text}</var>
+<arg>${element_text.replace(' ', '')}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230424 18:44:22.486" level="INFO">${element_text} = Totopolejepovinné.</msg>
+<status status="PASS" starttime="20230424 18:44:22.484" endtime="20230424 18:44:22.486"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${element_text}</arg>
+<arg>${text.replace(' ', '')}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230424 18:44:22.486" endtime="20230424 18:44:22.487"/>
+</kw>
+<status status="PASS" starttime="20230424 18:44:22.447" endtime="20230424 18:44:22.487"/>
+</kw>
+<status status="PASS" starttime="20230424 18:44:22.403" endtime="20230424 18:44:22.487"/>
+</kw>
+<kw name="Element should be visible and contain" library="main-settings-variables-keywords">
+<arg>${selector-error-email}</arg>
+<arg>${message-error}</arg>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230424 18:44:22.512" level="INFO">Element '//span[@id='frm-carRequestForm-email_message']' is displayed.</msg>
+<status status="PASS" starttime="20230424 18:44:22.489" endtime="20230424 18:44:22.512"/>
+</kw>
+<kw name="Check If Text Is Without Non-Breakable Spaces" library="main-settings-variables-keywords">
+<arg>${selector}</arg>
+<arg>${text}</arg>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${element_text}</var>
+<arg>${selector}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230424 18:44:22.535" level="INFO">${element_text} =   Toto pole je povinné.</msg>
+<status status="PASS" starttime="20230424 18:44:22.513" endtime="20230424 18:44:22.535"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${element_text}</var>
+<arg>${element_text.replace(' ', '')}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230424 18:44:22.537" level="INFO">${element_text} = Totopolejepovinné.</msg>
+<status status="PASS" starttime="20230424 18:44:22.535" endtime="20230424 18:44:22.537"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${element_text}</arg>
+<arg>${text.replace(' ', '')}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230424 18:44:22.537" endtime="20230424 18:44:22.538"/>
+</kw>
+<status status="PASS" starttime="20230424 18:44:22.512" endtime="20230424 18:44:22.538"/>
+</kw>
+<status status="PASS" starttime="20230424 18:44:22.488" endtime="20230424 18:44:22.538"/>
+</kw>
+<kw name="Check Count Of Occurrences" library="main-settings-variables-keywords">
+<arg>${selector-all-errors}</arg>
+<arg>3</arg>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${elementCount}</var>
+<arg>${selector}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230424 18:44:22.549" level="INFO">${elementCount} = 3</msg>
+<status status="PASS" starttime="20230424 18:44:22.539" endtime="20230424 18:44:22.549"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${elementCount}</arg>
+<arg>${count}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<msg timestamp="20230424 18:44:22.550" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20230424 18:44:22.549" endtime="20230424 18:44:22.550"/>
+</kw>
+<status status="PASS" starttime="20230424 18:44:22.539" endtime="20230424 18:44:22.550"/>
+</kw>
+<status status="PASS" starttime="20230424 18:44:21.754" endtime="20230424 18:44:22.551"/>
+</test>
+<status status="PASS" starttime="20230424 18:44:18.869" endtime="20230424 18:44:22.553"/>
+</suite>
+<status status="PASS" starttime="20230424 18:44:18.868" endtime="20230424 18:44:22.555"/>
+</suite>
+<status status="PASS" starttime="20230424 18:44:18.866" endtime="20230424 18:44:22.559"/>
+</suite>
+<status status="PASS" starttime="20230424 18:44:18.864" endtime="20230424 18:44:22.560"/>
+</suite>
+<status status="PASS" starttime="20230424 18:44:18.842" endtime="20230424 18:44:22.562"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="testovaniAutobazaru">testovaniAutobazaru</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="robotTests">testovaniAutobazaru.robotTests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="TS 001 - Veřejná část">testovaniAutobazaru.robotTests.TS 001 - Veřejná část</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1" name="TS 013 - Testování tvorby poptávky na vozidlo">testovaniAutobazaru.robotTests.TS 001 - Veřejná část.TS 013 - Testování tvorby poptávky na vozidlo</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="TP 028 - Tvorba nevyplněné poptávky">testovaniAutobazaru.robotTests.TS 001 - Veřejná část.TS 013 - Testování tvorby poptávky na vozidlo.TP 028 - Tvorba nevyplněné poptávky</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

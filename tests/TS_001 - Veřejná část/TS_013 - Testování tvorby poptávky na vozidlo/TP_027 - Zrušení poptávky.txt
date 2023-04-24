@@ -1,4 +1,5 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_027
 Název => Zrušení poptávky
 Popis => Po vytvoření poptávky ji chceme zrušit.

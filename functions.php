@@ -4,7 +4,7 @@ class testManager
 {
     const INDEX = "./tests/";
 
-    public $knownKeys = ["Pre-conditions", "Testovací kroky", "Post-conditions", "Očekávaný výsledek", "Vstupní data", "smallText", "path"];
+    public $knownKeys = ["Pre-conditions", "Testovací kroky", "Post-conditions", "Očekávaný výsledek", "Vstupní data", "smallText", "path", "log", "robot", "report"];
     private $keyInherits = ["Pre-conditions", "Post-conditions", "Očekávaný výsledek"];
     private $file = "";
     private bool $automatized = false;
@@ -88,6 +88,16 @@ class testManager
             $data["smallText"] = $data["Popis"];
 
         $data["path"] = $fileString;
+
+        if(isset($data["Automatizované"])){
+            $pos = strripos($fileString, ".");
+            $dir = substr($fileString, 0, $pos);
+            $data["log"] = str_replace("./tests/", "./robotTests/", $dir)."/log.html";
+            $data["report"] = str_replace("./tests/", "./robotTests/", $dir)."/report.html";
+            $data["robot"] = str_replace("./tests/", "./robotTests/", $dir).".robot";
+
+        }
+
         return $data;
     }
 
