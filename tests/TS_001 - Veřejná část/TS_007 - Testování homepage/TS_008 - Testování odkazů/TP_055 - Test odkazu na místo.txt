@@ -1,4 +1,5 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_055
 Název => Test odkazu na místo
 Popis => Testování přesměrování na místo na mapě.

@@ -1,4 +1,5 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_056
 Název => Test odkazu na portfolio
 Popis => Testování přesměrování na portfolio autora.

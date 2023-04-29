@@ -8,6 +8,7 @@ ${homeURL}  https://localhost/autobazarDrabek/
 ${selector-modal}  //div[@class="modal fade modal-xl show"]
 ${selector-modal-acceptance}  //div[@id="modal-accept"]
 ${selector-modal-acceptance-accept}  //a[contains(text(),"Ano")]
+${selector-google-accept}  //button[contains(span, 'Přijmout vše')]
 
 ${selector-alert}  //div[@role="alert"]
 
@@ -72,7 +73,7 @@ Set Focus and Wait
     [Arguments]    ${selector}
     Set Focus To Element    ${selector}
     Wait Until Element Is Visible    ${selector}
-    Sleep    0.5s
+    Sleep    0.7s
 
 Accept Modal Dialog
     Wait Until Element Is Visible    ${selector-modal-acceptance}
@@ -86,3 +87,12 @@ Check Tab URL
     Switch Window    ${handles[1]}
     Location Should Be    ${location}
     Switch Window    ${handles[0]}
+
+Switch Tabs
+    [Arguments]    ${position}
+    ${handles} =    Get Window Handles
+    Switch Window    ${handles[${position}]}
+
+Accept Google
+    Wait Until Element Is Visible    ${selector-google-accept}
+    Click Element    ${selector-google-accept}
