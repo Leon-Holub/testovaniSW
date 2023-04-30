@@ -1,7 +1,14 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_035
 Název => Smazání textu na hlavní stránce
 Popis => V nastavení přejdeme do části textů a smažeme text vytvořený v TP_033.
+Pre-conditions =>
+    Windows 11
+    Google Chrome – 110.0.5481.104
+    Windows 11, version 22H2
+    Uživatel je přihlášený
+    Nacházíme se na stránce "https://localhost/autobazarDrabek/Homepage/Texts"
 Testovací kroky =>
     Klikneme na odkaz s textem "Texty" -> Přesměrování na stránku "https://localhost/autobazarDrabek/Homepage/Texts"
 	Klikneme na tlačítko s ikonou koše a názvem "Smazat" u id vytvořeného textu

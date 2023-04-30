@@ -1,9 +1,10 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_041
 Název => Změna stavu více poptávek
 Popis => V systému je možnost zaškrtnout více řádků a změnit u všech stav najednou.
 Testovací kroky =>
-    Zaklikneme checkbox na řádku s ID 104
+    Zaklikneme checkbox na řádku s ID 114
     Zaklikneme checkbox na řádku s ID 101
     Zaklikneme checkbox na řádku s ID 102
     Klikneme na výběr skupinové akce

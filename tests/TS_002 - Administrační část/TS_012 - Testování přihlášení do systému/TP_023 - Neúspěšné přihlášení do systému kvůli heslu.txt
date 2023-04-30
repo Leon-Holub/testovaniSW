@@ -1,4 +1,5 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_023
 Název => Neúspěšné přihlášení do systému kvůli heslu
 Popis => Přihlášení se do systému se špatným heslem.

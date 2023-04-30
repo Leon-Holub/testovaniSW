@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.8.2 on win32)" generated="20230430 14:44:39.094" rpa="false" schemaversion="3">
+<suite id="s1" name="testovaniAutobazaru" source="C:\xampp\htdocs\testovaniAutobazaru">
+<suite id="s1-s1" name="robotTests" source="C:\xampp\htdocs\testovaniAutobazaru\robotTests">
+<suite id="s1-s1-s1" name="TS 002 - Administrační část" source="C:\xampp\htdocs\testovaniAutobazaru\robotTests\TS_002 - Administrační část">
+<suite id="s1-s1-s1-s1" name="TS 012 - Testování přihlášení do systému" source="C:\xampp\htdocs\testovaniAutobazaru\robotTests\TS_002 - Administrační část\TS_012 - Testování přihlášení do systému">
+<suite id="s1-s1-s1-s1-s1" name="TP 024 - Neúspěšné přihlášení do systému kvůli emailu" source="C:\xampp\htdocs\testovaniAutobazaru\robotTests\TS_002 - Administrační část\TS_012 - Testování přihlášení do systému\TP_024 - Neúspěšné přihlášení do systému kvůli emailu.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="Pre-conditions - Otevři prohlížeč a jdi na stránku loginu" line="5">
+<kw name="Open browser and accept danger In Login" library="Variables - TS_002 - Administrační část">
+<arg>${adresa-signIn}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${google}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230430 14:44:39.309" level="INFO">Opening browser 'Chrome' to base url 'https://localhost/autobazarDrabek/admin/sign-in'.</msg>
+<status status="PASS" starttime="20230430 14:44:39.308" endtime="20230430 14:44:40.783"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230430 14:44:40.783" endtime="20230430 14:44:40.906"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="details-button"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230430 14:44:40.907" level="INFO">Clicking element '//*[@id="details-button"]'.</msg>
+<status status="PASS" starttime="20230430 14:44:40.906" endtime="20230430 14:44:40.958"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="proceed-link"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230430 14:44:40.958" endtime="20230430 14:44:40.988"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="proceed-link"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230430 14:44:40.989" level="INFO">Clicking element '//*[@id="proceed-link"]'.</msg>
+<status status="PASS" starttime="20230430 14:44:40.989" endtime="20230430 14:44:41.045"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//form[@id='frm-signInForm']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230430 14:44:41.045" endtime="20230430 14:44:41.718"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230430 14:44:41.722" level="INFO">Current location is 'https://localhost/autobazarDrabek/admin/sign-in'.</msg>
+<status status="PASS" starttime="20230430 14:44:41.718" endtime="20230430 14:44:41.722"/>
+</kw>
+<status status="PASS" starttime="20230430 14:44:39.308" endtime="20230430 14:44:41.723"/>
+</kw>
+<status status="PASS" starttime="20230430 14:44:39.307" endtime="20230430 14:44:41.723"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t2" name="TP_024 - Neúspěšné přihlášení do systému kvůli emailu" line="8">
+<kw name="Login To System With Data" library="Variables - TS_002 - Administrační část">
+<arg>${data-bad-email}</arg>
+<arg>${data-login-password}</arg>
+<kw name="Set Focus and Wait" library="main-settings-variables-keywords">
+<arg>${selector-input-login-email}</arg>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230430 14:44:41.726" endtime="20230430 14:44:41.743"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230430 14:44:41.743" endtime="20230430 14:44:41.762"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230430 14:44:42.474" level="INFO">Slept 700 milliseconds</msg>
+<status status="PASS" starttime="20230430 14:44:41.762" endtime="20230430 14:44:42.474"/>
+</kw>
+<status status="PASS" starttime="20230430 14:44:41.726" endtime="20230430 14:44:42.474"/>
+</kw>
+<kw name="Check and input text" library="main-settings-variables-keywords">
+<arg>${selector-input-login-email}</arg>
+<arg>${email}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230430 14:44:42.475" endtime="20230430 14:44:42.490"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230430 14:44:42.491" level="INFO">Typing text 'spatny@mail.ne' into text field '//input[@id='frm-signInForm-email']'.</msg>
+<status status="PASS" starttime="20230430 14:44:42.491" endtime="20230430 14:44:42.571"/>
+</kw>
+<kw name="Textfield Should Contain" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<arg>${text}</arg>
+<doc>Verifies text field ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230430 14:44:42.604" level="INFO">Text field '//input[@id='frm-signInForm-email']' contains text 'spatny@mail.ne'.</msg>
+<status status="PASS" starttime="20230430 14:44:42.571" endtime="20230430 14:44:42.604"/>
+</kw>
+<status status="PASS" starttime="20230430 14:44:42.474" endtime="20230430 14:44:42.604"/>
+</kw>
+<kw name="Set Focus and Wait" library="main-settings-variables-keywords">
+<arg>${selector-input-login-password}</arg>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230430 14:44:42.604" endtime="20230430 14:44:42.625"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230430 14:44:42.625" endtime="20230430 14:44:42.640"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230430 14:44:43.352" level="INFO">Slept 700 milliseconds</msg>
+<status status="PASS" starttime="20230430 14:44:42.640" endtime="20230430 14:44:43.352"/>
+</kw>
+<status status="PASS" starttime="20230430 14:44:42.604" endtime="20230430 14:44:43.352"/>
+</kw>
+<kw name="Check and input text" library="main-settings-variables-keywords">
+<arg>${selector-input-login-password}</arg>
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230430 14:44:43.353" endtime="20230430 14:44:43.373"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230430 14:44:43.373" level="INFO">Typing text '1234567890a' into text field '//input[@id='frm-signInForm-password']'.</msg>
+<status status="PASS" starttime="20230430 14:44:43.373" endtime="20230430 14:44:43.449"/>
+</kw>
+<kw name="Textfield Should Contain" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<arg>${text}</arg>
+<doc>Verifies text field ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230430 14:44:43.480" level="INFO">Text field '//input[@id='frm-signInForm-password']' contains text '1234567890a'.</msg>
+<status status="PASS" starttime="20230430 14:44:43.449" endtime="20230430 14:44:43.480"/>
+</kw>
+<status status="PASS" starttime="20230430 14:44:43.352" endtime="20230430 14:44:43.480"/>
+</kw>
+<kw name="Wait and click" library="main-settings-variables-keywords">
+<arg>${selector-input-login-submit}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230430 14:44:43.480" endtime="20230430 14:44:43.500"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230430 14:44:43.501" level="INFO">Clicking element '//input[@name='_submit']'.</msg>
+<status status="PASS" starttime="20230430 14:44:43.501" endtime="20230430 14:44:43.866"/>
+</kw>
+<status status="PASS" starttime="20230430 14:44:43.480" endtime="20230430 14:44:43.866"/>
+</kw>
+<status status="PASS" starttime="20230430 14:44:41.724" endtime="20230430 14:44:43.866"/>
+</kw>
+<kw name="Location Should Contain" library="SeleniumLibrary">
+<arg>${adresa-signIn}</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<msg timestamp="20230430 14:44:43.873" level="INFO">Current location contains 'https://localhost/autobazarDrabek/admin/sign-in'.</msg>
+<status status="PASS" starttime="20230430 14:44:43.867" endtime="20230430 14:44:43.874"/>
+</kw>
+<kw name="Check Alert State" library="main-settings-variables-keywords">
+<arg>${alert-state-danger}</arg>
+<arg>${alert-login-fail-text}</arg>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${alertClass}</var>
+<arg>${selector-alert}</arg>
+<arg>class</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20230430 14:44:43.896" level="INFO">${alertClass} = alert alert-danger</msg>
+<status status="PASS" starttime="20230430 14:44:43.875" endtime="20230430 14:44:43.896"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${alertText}</var>
+<arg>${selector-alert}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230430 14:44:43.914" level="INFO">${alertText} = Email nebo heslo je špatně</msg>
+<status status="PASS" starttime="20230430 14:44:43.897" endtime="20230430 14:44:43.914"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${state}</arg>
+<arg>${alertClass}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20230430 14:44:43.914" endtime="20230430 14:44:43.916"/>
+</kw>
+<kw name="Check if text is equal" library="main-settings-variables-keywords">
+<arg>${selector-alert}</arg>
+<arg>${text}</arg>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${selectedText}</var>
+<arg>${selector}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230430 14:44:43.931" level="INFO">${selectedText} = Email nebo heslo je špatně</msg>
+<status status="PASS" starttime="20230430 14:44:43.916" endtime="20230430 14:44:43.931"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${selectedText}</arg>
+<arg>${text}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230430 14:44:43.931" endtime="20230430 14:44:43.931"/>
+</kw>
+<status status="PASS" starttime="20230430 14:44:43.916" endtime="20230430 14:44:43.931"/>
+</kw>
+<status status="PASS" starttime="20230430 14:44:43.874" endtime="20230430 14:44:43.931"/>
+</kw>
+<status status="PASS" starttime="20230430 14:44:41.724" endtime="20230430 14:44:43.931"/>
+</test>
+<status status="PASS" starttime="20230430 14:44:39.122" endtime="20230430 14:44:43.933"/>
+</suite>
+<status status="PASS" starttime="20230430 14:44:39.120" endtime="20230430 14:44:43.937"/>
+</suite>
+<status status="PASS" starttime="20230430 14:44:39.118" endtime="20230430 14:44:43.940"/>
+</suite>
+<status status="PASS" starttime="20230430 14:44:39.117" endtime="20230430 14:44:43.942"/>
+</suite>
+<status status="PASS" starttime="20230430 14:44:39.096" endtime="20230430 14:44:43.946"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="testovaniAutobazaru">testovaniAutobazaru</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="robotTests">testovaniAutobazaru.robotTests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="TS 002 - Administrační část">testovaniAutobazaru.robotTests.TS 002 - Administrační část</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1" name="TS 012 - Testování přihlášení do systému">testovaniAutobazaru.robotTests.TS 002 - Administrační část.TS 012 - Testování přihlášení do systému</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="TP 024 - Neúspěšné přihlášení do systému kvůli emailu">testovaniAutobazaru.robotTests.TS 002 - Administrační část.TS 012 - Testování přihlášení do systému.TP 024 - Neúspěšné přihlášení do systému kvůli emailu</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

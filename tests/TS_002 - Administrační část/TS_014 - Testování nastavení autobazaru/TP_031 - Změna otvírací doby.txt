@@ -1,4 +1,5 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_031
 Název =>  Změna otvírací doby
 Popis => V nastavení změníme otevírací dobu na všechny dny v týdnu.

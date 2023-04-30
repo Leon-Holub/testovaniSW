@@ -12,6 +12,8 @@ ${selector-google-accept}  //button[contains(span, 'Přijmout vše')]
 
 ${selector-alert}  //div[@role="alert"]
 
+${alert-state-danger}  alert alert-danger
+
 ${selector-content}  //section[@class="content"]
 ${selector-logo}  //img[@alt='logo autobazaru']
 
@@ -26,7 +28,6 @@ Open browser and accept danger
     Click Element    //*[@id="proceed-link"]
     Wait Until Element Is Visible    //div[@id="main"]
     Location Should Be    ${URL}
-    #Slowdown Selenium Robot
 
 Slowdown selenium robot
     Set Selenium Speed    1
@@ -97,3 +98,9 @@ Accept Google
     Wait Until Element Is Visible    ${selector-google-accept}
     Click Element    ${selector-google-accept}
 
+Check Alert State
+    [Arguments]    ${state}  ${text}
+    ${alertClass}=  Get Element Attribute    ${selector-alert}  class
+    ${alertText}=  Get Text    ${selector-alert}
+    Should Be Equal As Strings    ${state}  ${alertClass}
+    Check If Text Is Equal    ${selector-alert}  ${text}

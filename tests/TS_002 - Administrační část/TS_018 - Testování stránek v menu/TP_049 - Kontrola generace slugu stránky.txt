@@ -1,4 +1,5 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_049
 Název => Kontrola generace slugu stránky
 Popis => Při vytváření stránky se musí napsat název. Název se pak automaticky převádí do Slugu (název bez háčku a čárek, místo mezer pomlčky).

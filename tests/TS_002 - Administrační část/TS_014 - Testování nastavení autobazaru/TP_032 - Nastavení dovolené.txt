@@ -1,4 +1,5 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_032
 Název =>  Nastavení dovolené
 Popis => V nastavení změníme datum dovolené aby byl autobazar dnešní den zavřený.
@@ -9,6 +10,6 @@ Testovací kroky =>
 	Klikneme na odkaz "kontakt" -> Přesměrování na stránku "https://localhost/autobazarDrabek/kontakt"
 Očekávaný výsledek =>
 	Ve vrchním menu bude text "Zavřeno"
-	Pod Otevírací dobou bude informační políčko s textem "23.4.2023 - zavřeno"
+	Pod Otevírací dobou bude informační políčko s textem "30.4.2023 - zavřeno"
 Vstupní data =>
-    Zavřeno od = 23.04.2023
+    Zavřeno od = 30.04.2023

@@ -1,4 +1,5 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_057
 Název => Kontrola počtu nevyyřízených poptávek
 Popis => Kontrola zda se schoduje počet nevyřízených poptávek jak v bočním menu, tak na nástěnce.

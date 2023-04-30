@@ -1,9 +1,15 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_034
 Název => Změna textu na hlavní stránce
 Popis => V nastavení přejdeme do části textů a upravíme text vytvořený v TP_033.
+Pre-conditions =>
+    Windows 11
+    Google Chrome – 110.0.5481.104
+    Windows 11, version 22H2
+    Uživatel je přihlášený
+    Nacházíme se na stránce "https://localhost/autobazarDrabek/Homepage/Texts"
 Testovací kroky =>
-    Klikneme na odkaz s textem "Texty" -> Přesměrování na stránku "https://localhost/autobazarDrabek/Homepage/Texts"
 	Klikneme na tlačítko s ikonou tužky u id vytvořeného textu
 	Do textového pole vložíme text ze vstupních dat
 	Klikneme na uložit

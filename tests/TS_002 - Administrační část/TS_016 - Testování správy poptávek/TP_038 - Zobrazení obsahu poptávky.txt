@@ -1,8 +1,9 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_038
 Název => Zobrazení obsahu poptávky
-Popis => Zobrazení informací o poptávce číslo 104
+Popis => Zobrazení informací o poptávce číslo 114
 Testovací kroky =>
-    Klikneme na ikonu oka v řádku s id 104
+    Klikneme na ikonu oka v řádku s id 114
 Očekávaný výsledek =>
 	Otevře se modální okno s informacemi o poptávce

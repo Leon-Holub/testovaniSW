@@ -1,10 +1,11 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_052
 Název => Vytvoření odkazu
 Popis => Otestujeme základní vytvoření odkazu a vložíme ho do spodního menu.
 Testovací kroky =>
     Klikneme na plus -> Přesměrování na stránku "https://localhost/autobazarDrabek/Page/Add"
-    Vlozíme název ze vstupních dat -> Slug bude "odkazecek"
+    Vlozíme název ze vstupních dat -> Slug bude "FAI"
     Zvolíme typ Odkaz -> Objeví se pole na vložení odkazu a skryje se pole pro editaci stránky
     Vyplníme zbytek formuláře podle vstupních dat
     Klikneme na tlačítko Uložit -> Nacházme se na stránce "https://localhost/autobazarDrabek/Navigation"
@@ -12,7 +13,7 @@ Testovací kroky =>
 Očekávaný výsledek =>
     Otevře se na nové kartě stránka https://fai.utb.cz/
 Vstupní data =>
-    Název = Odkazeček
+    Název = FAI
     Typ = Odkaz
     Odkaz = "https://fai.utb.cz/"
     Pozice = Spodní

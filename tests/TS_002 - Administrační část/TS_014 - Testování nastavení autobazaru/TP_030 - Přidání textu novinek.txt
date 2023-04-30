@@ -1,4 +1,5 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_030
 Název => Přidání textu novinek
 Popis => V nastavení přidáme obsah textového pole novinek.

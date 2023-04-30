@@ -1,9 +1,15 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_033
 Název => Přidání textu na hlavní stránku
 Popis => V nastavení přejdeme do části textů a přidáme nový textový blok na úvodní stránku.
+Pre-conditions =>
+    Windows 11
+    Google Chrome – 110.0.5481.104
+    Windows 11, version 22H2
+    Uživatel je přihlášený
+    Nacházíme se na stránce "https://localhost/autobazarDrabek/Homepage/Texts"
 Testovací kroky =>
-    Klikneme na odkaz s textem "Texty" -> Přesměrování na stránku "https://localhost/autobazarDrabek/Homepage/Texts"
 	Klikneme na tlačítko + -> Přidá se input pro text a obrázek
 	Do textového pole přidáme text ze vstupních dat
 	Klikneme na tlačítko uložit

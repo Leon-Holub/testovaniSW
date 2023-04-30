@@ -1,4 +1,5 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_051
 Název => Vytvoření stránky
 Popis => Otestujeme základní vytvoření stránky a vložíme ho do spodního menu.
