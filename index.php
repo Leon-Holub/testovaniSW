@@ -29,7 +29,7 @@ $testSets = $manager->getTestSets($file);
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Testování autobazaru <?php echo $data["ID"] ? " - " . $data["ID"] : ""; ?></title>
     <link rel="stylesheet" href="styles/styles-front.css">
     <style>
         .ts-after::after {
@@ -79,7 +79,7 @@ $testSets = $manager->getTestSets($file);
     <div class="carsList-heading--image carsList-heading--image--carsList">
         <img src="./images/hero-small.jpg" alt="hero-small">
         <div class="container carsList-heading--text position-absolute start-50 bottom-0 translate-middle-x d-flex justify-content-center">
-            <h1 class="pb-4 <?php if ($data["Typ"] == "TS") echo "ts-after"; ?> "><?php echo $data["Název"] ?? "Testování autobazaru"; echo " - " . count($testCases) ?></h1>
+            <h1 class="pb-4 <?php if ($data["Typ"] == "TS") echo "ts-after"; ?> "><?php echo $data["Název"] ?? "Testování autobazaru"; ?></h1>
         </div>
     </div>
 </section>
@@ -145,7 +145,8 @@ $testSets = $manager->getTestSets($file);
                         }
                         if (isset($data["Automatizované"])) {
                             ?>
-                            <h4 class="mt-4 mb-3"><a target="_blank" href="<?php echo $data["robot"] ?>">.robot soubor</a></h4>
+                            <h4 class="mt-4 mb-3"><a target="_blank" href="<?php echo $data["robot"] ?>">.robot
+                                    soubor</a></h4>
                             <iframe class="" width="100%" height="400" src="<?php echo $data["robot"] ?>"></iframe>
                             <?php
                         }
@@ -226,7 +227,8 @@ $testSets = $manager->getTestSets($file);
                                         <path d="M320 0c17.7 0 32 14.3 32 32V96H472c39.8 0 72 32.2 72 72V440c0 39.8-32.2 72-72 72H168c-39.8 0-72-32.2-72-72V168c0-39.8 32.2-72 72-72H288V32c0-17.7 14.3-32 32-32zM208 384c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H208zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H304zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H400zM264 256a40 40 0 1 0 -80 0 40 40 0 1 0 80 0zm152 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80zM48 224H64V416H48c-26.5 0-48-21.5-48-48V272c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H576V224h16z"/>
                                     </svg>
                                 </h3>
-                                <iframe width="100%" height="400" src="<?php echo $data["log"] ?>"></iframe>
+                                <iframe width="100%" height="400"
+                                        src="<?php echo $data["log"] ?>#s1-s1-s1-s1-s1-s1"></iframe>
                                 <iframe class="mt-4" width="100%" height="400"
                                         src="<?php echo $data["report"] ?>"></iframe>
                             </div>

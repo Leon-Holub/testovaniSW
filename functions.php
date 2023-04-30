@@ -214,9 +214,6 @@ class testManager
                 if ($this->automatized) {
                     if (isset($content["Automatizované"]))
                         $testCases[$content["ID"]] = $content;
-                } else if ($this->manual) {
-                    if (!isset($content["Automatizované"]))
-                        $testCases[$content["ID"]] = $content;
                 } else {
                     $testCases[$content["ID"]] = $content;
                 }
