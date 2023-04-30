@@ -1,4 +1,5 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_018
 Název => Test odkazu na stránku mimo systém (vrchní)
 Popis => Zobrazení stránky, která se nachází mimo systém. Odkaz se nachází ve vrchním menu.

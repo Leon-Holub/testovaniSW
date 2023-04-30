@@ -1,4 +1,5 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_010
 Název => Test filtrovacího výběru
 Popis => Testování filtru, ve kterém volíme jednu možnost z předdefinovaných možností.
@@ -7,6 +8,6 @@ Testovací kroky =>
 	Zvolíme osobní vůz -> Skryje se výběr druhů vozidel
 	Sjedeme do sekce "Výběr vozidel"
 Očekávaný výsledek =>
-	Zobrazí se nám pouze vozidla které patří druhem do kategorie "Osobní vůz"
+	Zobrazí se nám pouze vozidla které patří druhem do kategorie "Osobní vůz" (4 vozidla)
 Vstupní data =>
     Druh vozidla = Osobní vůz

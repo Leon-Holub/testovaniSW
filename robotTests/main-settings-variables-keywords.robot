@@ -96,3 +96,4 @@ Switch Tabs
 Accept Google
     Wait Until Element Is Visible    ${selector-google-accept}
     Click Element    ${selector-google-accept}
+

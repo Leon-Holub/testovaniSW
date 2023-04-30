@@ -79,7 +79,7 @@ $testSets = $manager->getTestSets($file);
     <div class="carsList-heading--image carsList-heading--image--carsList">
         <img src="./images/hero-small.jpg" alt="hero-small">
         <div class="container carsList-heading--text position-absolute start-50 bottom-0 translate-middle-x d-flex justify-content-center">
-            <h1 class="pb-4 <?php if ($data["Typ"] == "TS") echo "ts-after"; ?> "><?php echo $data["Název"] ?? "Testování autobazaru"; ?></h1>
+            <h1 class="pb-4 <?php if ($data["Typ"] == "TS") echo "ts-after"; ?> "><?php echo $data["Název"] ?? "Testování autobazaru"; echo " - " . count($testCases) ?></h1>
         </div>
     </div>
 </section>

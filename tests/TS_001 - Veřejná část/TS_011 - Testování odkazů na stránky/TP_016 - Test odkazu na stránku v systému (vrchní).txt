@@ -1,10 +1,11 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_016
 Název => Test odkazu na stránku v systému (vrchní)
 Popis => Zobrazení stránky, vytvořené v systému a přidané ve vrchním menu.
 Testovací kroky =>
 	Ve vrchním menu klikneme na odkaz s textem "První stránka"
 Očekávaný výsledek =>
-	Budeme se nacházen na stránce "První stránka" s adresou "http://localhost/autobazarDrabek/stranka/asfd"
+	Budeme se nacházen na stránce "První stránka" s adresou "https://localhost/autobazarDrabek/stranka/asfd"
 Vstupní data =>
     Text odkazu = První stránka

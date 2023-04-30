@@ -1,4 +1,5 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_013
 Název => Test splněné kombinace filtrů
 Popis => Test splněné kombinace filtrů a najití konkrétního vozu.
@@ -15,12 +16,6 @@ Testovací kroky =>
 	Zvolíme Diesel -> Skryje se výběr paliv
 	Klikneme na výběrové políčko pro typ převodovky -> Zobrazí se výběr převodovek
 	Zvolíme Manuál -> Skryje se výběr převodovek
-	Klikneme na levý kruh u slideru pro volbu částky
-    Posuneme slider na hodnotu 500000 -> hodnota na slideru se nastaví na 500000 Kč
-    Klikneme na pravý kruh u slideru pro volbu Najetých kilometrů
-    Posuneme slider na hodnotu 110000  -> hodnota na slideru se nastaví na 1000000 km
-    Klikneme na levý kruh u slideru pro volbu roku výroby
-    Posuneme slider na hodnotu 2011 -> hodnota na slideru se nastaví na 2011
     Sjedeme do sekce "Výběr vozidel"
 Očekávaný výsledek =>
 	Zobrazí se nám pouze vozidla, odpovídají požadavkům ze vstupnívh dat.
@@ -31,6 +26,3 @@ Vstupní data =>
     Model = XC 90
     Typ paliva = Diesel
     Typ převodovky = Manuál
-    Cena od = 500000
-    Najeto do = 110000
-    Rok výroby od = 2011

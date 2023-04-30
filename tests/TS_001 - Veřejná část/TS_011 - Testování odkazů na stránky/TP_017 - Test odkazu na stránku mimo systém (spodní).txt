@@ -1,4 +1,5 @@
 Typ => TP
+Automatizované => Ano
 ID => TP_017
 Název => Test odkazu na stránku mimo systém (spodní)
 Popis => Zobrazení stránky, která se nachází mimo systém. Odkaz se nachází v patiččce.

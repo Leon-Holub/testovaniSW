@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.8.2 on win32)" generated="20230430 13:12:12.096" rpa="false" schemaversion="3">
+<suite id="s1" name="testovaniAutobazaru" source="C:\xampp\htdocs\testovaniAutobazaru">
+<suite id="s1-s1" name="robotTests" source="C:\xampp\htdocs\testovaniAutobazaru\robotTests">
+<suite id="s1-s1-s1" name="TS 001 - Veřejná část" source="C:\xampp\htdocs\testovaniAutobazaru\robotTests\TS_001 - Veřejná část">
+<suite id="s1-s1-s1-s1" name="TS 010 - Testování filtrace vozidel" source="C:\xampp\htdocs\testovaniAutobazaru\robotTests\TS_001 - Veřejná část\TS_010 - Testování filtrace vozidel">
+<suite id="s1-s1-s1-s1-s1" name="TP 011 - Test volby více možností ve výběru" source="C:\xampp\htdocs\testovaniAutobazaru\robotTests\TS_001 - Veřejná část\TS_010 - Testování filtrace vozidel\TP_011 - Test volby více možností ve výběru.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="Pre-conditions - Otevři prohlížeč a jdi na stránku" line="5">
+<kw name="Open browser and accept danger" library="main-settings-variables-keywords">
+<arg>${homeURL}${adresa-vyhledavacVozidel}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${google}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230430 13:12:12.316" level="INFO">Opening browser 'Chrome' to base url 'https://localhost/autobazarDrabek/vyhledavac-vozidel'.</msg>
+<status status="PASS" starttime="20230430 13:12:12.315" endtime="20230430 13:12:14.016"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230430 13:12:14.017" endtime="20230430 13:12:14.146"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="details-button"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230430 13:12:14.147" level="INFO">Clicking element '//*[@id="details-button"]'.</msg>
+<status status="PASS" starttime="20230430 13:12:14.147" endtime="20230430 13:12:14.219"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="proceed-link"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230430 13:12:14.219" endtime="20230430 13:12:14.249"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="proceed-link"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230430 13:12:14.250" level="INFO">Clicking element '//*[@id="proceed-link"]'.</msg>
+<status status="PASS" starttime="20230430 13:12:14.250" endtime="20230430 13:12:14.301"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//div[@id="main"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230430 13:12:14.301" endtime="20230430 13:12:15.179"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230430 13:12:15.185" level="INFO">Current location is 'https://localhost/autobazarDrabek/vyhledavac-vozidel'.</msg>
+<status status="PASS" starttime="20230430 13:12:15.179" endtime="20230430 13:12:15.185"/>
+</kw>
+<status status="PASS" starttime="20230430 13:12:12.315" endtime="20230430 13:12:15.185"/>
+</kw>
+<status status="PASS" starttime="20230430 13:12:12.314" endtime="20230430 13:12:15.186"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t2" name="TP_011 - Test volby více možností ve výběru" line="8">
+<kw name="Set Value on Custom Select" library="TS_010 - Testování filtrace vozidel">
+<arg>${selector-div-customSelect-druhZnacka}</arg>
+<arg>${selector-div-customSelect-option-znacka-BMW}</arg>
+<kw name="Wait and click" library="main-settings-variables-keywords">
+<arg>${selector-customSelect}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230430 13:12:15.188" endtime="20230430 13:12:15.221"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230430 13:12:15.222" level="INFO">Clicking element '//label[normalize-space()='Značka']/following-sibling::div[@class="custom-select"]'.</msg>
+<status status="PASS" starttime="20230430 13:12:15.221" endtime="20230430 13:12:15.285"/>
+</kw>
+<status status="PASS" starttime="20230430 13:12:15.188" endtime="20230430 13:12:15.285"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector-customSelect}${selector-div-customSelect-panel}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230430 13:12:15.285" endtime="20230430 13:12:15.311"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${selector-customSelect}${selector-div-customSelect-panel}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230430 13:12:15.327" level="INFO">Element '//label[normalize-space()='Značka']/following-sibling::div[@class="custom-select"]//div[@class="custom-select-panel"]' is displayed.</msg>
+<status status="PASS" starttime="20230430 13:12:15.311" endtime="20230430 13:12:15.329"/>
+</kw>
+<kw name="Set Focus and Wait" library="main-settings-variables-keywords">
+<arg>${selector-customSelect}//div[normalize-space()='${selector-option}' and @class="custom-select-option"]</arg>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230430 13:12:15.329" endtime="20230430 13:12:15.347"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230430 13:12:15.347" endtime="20230430 13:12:15.587"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230430 13:12:16.299" level="INFO">Slept 700 milliseconds</msg>
+<status status="PASS" starttime="20230430 13:12:15.588" endtime="20230430 13:12:16.299"/>
+</kw>
+<status status="PASS" starttime="20230430 13:12:15.329" endtime="20230430 13:12:16.299"/>
+</kw>
+<kw name="Wait and click" library="main-settings-variables-keywords">
+<arg>${selector-customSelect}//div[normalize-space()='${selector-option}' and @class="custom-select-option"]</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230430 13:12:16.300" endtime="20230430 13:12:16.317"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230430 13:12:16.317" level="INFO">Clicking element '//label[normalize-space()='Značka']/following-sibling::div[@class="custom-select"]//div[normalize-space()='BMW' and @class="custom-select-option"]'.</msg>
+<status status="PASS" starttime="20230430 13:12:16.317" endtime="20230430 13:12:16.369"/>
+</kw>
+<status status="PASS" starttime="20230430 13:12:16.299" endtime="20230430 13:12:16.369"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${selector-customSelect}${selector-div-customSelect-panel}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230430 13:12:16.369" endtime="20230430 13:12:16.612"/>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>${selector-customSelect}${selector-div-customSelect-panel}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20230430 13:12:16.629" level="INFO">Element '//label[normalize-space()='Značka']/following-sibling::div[@class="custom-select"]//div[@class="custom-select-panel"]' exists but is not displayed.</msg>
+<status status="PASS" starttime="20230430 13:12:16.612" endtime="20230430 13:12:16.629"/>
+</kw>
+<status status="PASS" starttime="20230430 13:12:15.188" endtime="20230430 13:12:16.629"/>
+</kw>
+<kw name="Set Value on Custom Select" library="TS_010 - Testování filtrace vozidel">
+<arg>${selector-div-customSelect-druhZnacka}</arg>
+<arg>${selector-div-customSelect-option-znacka-Opel}</arg>
+<kw name="Wait and click" library="main-settings-variables-keywords">
+<arg>${selector-customSelect}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230430 13:12:16.630" endtime="20230430 13:12:16.646"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230430 13:12:16.647" level="INFO">Clicking element '//label[normalize-space()='Značka']/following-sibling::div[@class="custom-select"]'.</msg>
+<status status="PASS" starttime="20230430 13:12:16.646" endtime="20230430 13:12:16.683"/>
+</kw>
+<status status="PASS" starttime="20230430 13:12:16.630" endtime="20230430 13:12:16.683"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector-customSelect}${selector-div-customSelect-panel}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230430 13:12:16.683" endtime="20230430 13:12:16.700"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${selector-customSelect}${selector-div-customSelect-panel}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230430 13:12:16.717" level="INFO">Element '//label[normalize-space()='Značka']/following-sibling::div[@class="custom-select"]//div[@class="custom-select-panel"]' is displayed.</msg>
+<status status="PASS" starttime="20230430 13:12:16.700" endtime="20230430 13:12:16.717"/>
+</kw>
+<kw name="Set Focus and Wait" library="main-settings-variables-keywords">
+<arg>${selector-customSelect}//div[normalize-space()='${selector-option}' and @class="custom-select-option"]</arg>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230430 13:12:16.719" endtime="20230430 13:12:16.735"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230430 13:12:16.736" endtime="20230430 13:12:16.754"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230430 13:12:17.466" level="INFO">Slept 700 milliseconds</msg>
+<status status="PASS" starttime="20230430 13:12:16.754" endtime="20230430 13:12:17.466"/>
+</kw>
+<status status="PASS" starttime="20230430 13:12:16.717" endtime="20230430 13:12:17.466"/>
+</kw>
+<kw name="Wait and click" library="main-settings-variables-keywords">
+<arg>${selector-customSelect}//div[normalize-space()='${selector-option}' and @class="custom-select-option"]</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230430 13:12:17.467" endtime="20230430 13:12:17.481"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230430 13:12:17.482" level="INFO">Clicking element '//label[normalize-space()='Značka']/following-sibling::div[@class="custom-select"]//div[normalize-space()='Opel' and @class="custom-select-option"]'.</msg>
+<status status="PASS" starttime="20230430 13:12:17.481" endtime="20230430 13:12:17.521"/>
+</kw>
+<status status="PASS" starttime="20230430 13:12:17.466" endtime="20230430 13:12:17.521"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${selector-customSelect}${selector-div-customSelect-panel}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230430 13:12:17.522" endtime="20230430 13:12:17.767"/>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>${selector-customSelect}${selector-div-customSelect-panel}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20230430 13:12:17.785" level="INFO">Element '//label[normalize-space()='Značka']/following-sibling::div[@class="custom-select"]//div[@class="custom-select-panel"]' exists but is not displayed.</msg>
+<status status="PASS" starttime="20230430 13:12:17.768" endtime="20230430 13:12:17.785"/>
+</kw>
+<status status="PASS" starttime="20230430 13:12:16.630" endtime="20230430 13:12:17.785"/>
+</kw>
+<kw name="Set Focus and Wait" library="main-settings-variables-keywords">
+<arg>${selector-section-foundCars}</arg>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230430 13:12:17.786" endtime="20230430 13:12:17.800"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${selector}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230430 13:12:17.800" endtime="20230430 13:12:17.814"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230430 13:12:18.526" level="INFO">Slept 700 milliseconds</msg>
+<status status="PASS" starttime="20230430 13:12:17.815" endtime="20230430 13:12:18.526"/>
+</kw>
+<status status="PASS" starttime="20230430 13:12:17.785" endtime="20230430 13:12:18.526"/>
+</kw>
+<kw name="Check Count Of Occurrences" library="main-settings-variables-keywords">
+<arg>${selector-div-carCard}</arg>
+<arg>${count-brand-opel}</arg>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${elementCount}</var>
+<arg>${selector}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230430 13:12:18.539" level="INFO">${elementCount} = 1</msg>
+<status status="PASS" starttime="20230430 13:12:18.528" endtime="20230430 13:12:18.539"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${elementCount}</arg>
+<arg>${count}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<msg timestamp="20230430 13:12:18.539" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20230430 13:12:18.539" endtime="20230430 13:12:18.539"/>
+</kw>
+<status status="PASS" starttime="20230430 13:12:18.527" endtime="20230430 13:12:18.539"/>
+</kw>
+<status status="PASS" starttime="20230430 13:12:15.187" endtime="20230430 13:12:18.540"/>
+</test>
+<status status="PASS" starttime="20230430 13:12:12.125" endtime="20230430 13:12:18.542"/>
+</suite>
+<status status="PASS" starttime="20230430 13:12:12.123" endtime="20230430 13:12:18.544"/>
+</suite>
+<status status="PASS" starttime="20230430 13:12:12.121" endtime="20230430 13:12:18.546"/>
+</suite>
+<status status="PASS" starttime="20230430 13:12:12.118" endtime="20230430 13:12:18.548"/>
+</suite>
+<status status="PASS" starttime="20230430 13:12:12.097" endtime="20230430 13:12:18.549"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="testovaniAutobazaru">testovaniAutobazaru</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="robotTests">testovaniAutobazaru.robotTests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="TS 001 - Veřejná část">testovaniAutobazaru.robotTests.TS 001 - Veřejná část</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1" name="TS 010 - Testování filtrace vozidel">testovaniAutobazaru.robotTests.TS 001 - Veřejná část.TS 010 - Testování filtrace vozidel</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="TP 011 - Test volby více možností ve výběru">testovaniAutobazaru.robotTests.TS 001 - Veřejná část.TS 010 - Testování filtrace vozidel.TP 011 - Test volby více možností ve výběru</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
