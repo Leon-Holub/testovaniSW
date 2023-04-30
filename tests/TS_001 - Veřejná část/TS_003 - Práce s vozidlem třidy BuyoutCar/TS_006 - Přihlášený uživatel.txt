@@ -1,7 +1,0 @@
-Typ => TS
-ID => TS_006
-Název => Přihlášený uživatel
-Popis => V této sadě se věnujeme testování funkcí pro vozy vytvořené přes formulář pro výkup vozů z pohledu přihlášené osoby. Má více možností práce s vozem. V této sadě testujeme převod typu BuyoutCar (výkup vozu) na typ Car (každý vůz v systému, který je na prodej). Dále testujeme zda lze změnit stav vozu, když je již převeden do typu Car.
-Vstupní podmínky => Uživatel musí být přihlášen.
-Datum => 21.02.2023
-Autor => Leon Holub
