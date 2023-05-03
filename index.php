@@ -147,7 +147,8 @@ $testSets = $manager->getTestSets($file);
                             ?>
                             <h4 class="mt-4 mb-3"><a target="_blank" href="<?php echo $data["robot"] ?>">.robot
                                     soubor</a></h4>
-                            <iframe class="" width="100%" height="400" src="<?php echo $data["robot"] ?>"></iframe>
+                            <!--<iframe class="" width="100%" height="400" src="<?php echo $data["robot"] ?>"></iframe>-->
+                            <div style="height: 400px; font-size: 12px; line-height: 1rem" class="bg-black text-white overflow-scroll "><?php  testManager::printFile($data["robot"]); ?></div>
                             <?php
                         }
                         ?>

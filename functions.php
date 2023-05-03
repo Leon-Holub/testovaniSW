@@ -34,6 +34,26 @@ class testManager
         return dirname($file);
     }
 
+    public static function printFile($fileString)
+    {
+
+        $file = fopen($fileString, "r");
+        $fileContent = fread($file, filesize($fileString));
+        $lines = explode("\n", $fileContent);
+
+        foreach ($lines as $line) {
+            if ($line[0] == " ") {
+                echo "<p class='ms-3 mb-1'>$line</p>";
+            } else if ($line[0] == "*") {
+                echo "<p class='my-2'>$line</p>";
+            } else {
+                echo "<p class='mb-1'>$line</p>";
+            }
+        }
+        //$fileContent = str_replace(["\n", "\t"], ["<br>", "- "], $fileContent);
+        //echo $fileContent;
+    }
+
     function getContent($fileString = "")
     {
         if ($fileString == "")
@@ -89,12 +109,12 @@ class testManager
 
         $data["path"] = $fileString;
 
-        if(isset($data["Automatizované"])){
+        if (isset($data["Automatizované"])) {
             $pos = strripos($fileString, ".");
             $dir = substr($fileString, 0, $pos);
-            $data["log"] = str_replace("./tests/", "./robotTests/", $dir)."/log.html";
-            $data["report"] = str_replace("./tests/", "./robotTests/", $dir)."/report.html";
-            $data["robot"] = str_replace("./tests/", "./robotTests/", $dir).".robot";
+            $data["log"] = str_replace("./tests/", "./robotTests/", $dir) . "/log.html";
+            $data["report"] = str_replace("./tests/", "./robotTests/", $dir) . "/report.html";
+            $data["robot"] = str_replace("./tests/", "./robotTests/", $dir) . ".robot";
 
         }
 
