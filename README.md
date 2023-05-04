@@ -9,3 +9,6 @@ Existuje také online verze této aplikace, kterou je možné najít na adrese h
 
 ## Zdrojové soubory
 Všechny zdrojové soubory použité v tomto projektu jsou k dispozici na adrese https://github.com/Leon-Holub/testovaniSW.
+
+## Testovaný web
+Pro zobrazení testovaného webu je možné navštívit webovou stránku https://danielazednickova.cz avšak web byl testovaný na localhostu. Web se bude po spuštění nacházet na https://www.autobazardrabek.cz

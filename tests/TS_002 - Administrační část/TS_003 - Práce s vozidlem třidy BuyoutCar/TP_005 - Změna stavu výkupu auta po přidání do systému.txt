@@ -14,5 +14,5 @@ Testovací kroky =>
 	Klikneme na ikonu fajfky
 Post-conditions =>
 	Znovu načteme stránku
-	Očekávaný výsledek:
-	Zobrazení chybové hlášky
+Očekávaný výsledek =>
+	Zobrazení chybové hlášky	
