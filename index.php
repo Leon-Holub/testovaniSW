@@ -231,7 +231,7 @@ $testSets = $manager->getTestSets($file);
                                     </svg>
                                 </h3>
                                 <iframe width="100%" height="400"
-                                        src="<?php echo $data["log"] ?>#s1-s1-s1-s1-s1-s1"></iframe>
+                                        src="<?php echo $data["log"] ?>"></iframe>
                                 <iframe class="mt-4" width="100%" height="400"
                                         src="<?php echo $data["report"] ?>"></iframe>
                             </div>

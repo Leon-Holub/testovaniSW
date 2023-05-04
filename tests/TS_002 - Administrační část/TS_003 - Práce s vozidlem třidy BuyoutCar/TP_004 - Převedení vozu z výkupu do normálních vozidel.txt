@@ -1,0 +1,33 @@
+Typ => TP
+ID => TP_004
+Název => Převedení vozu z výkupu do normálních vozidel
+Popis => Vůz přidaný v TP_001 předěláme z typu BuyoutCar na typ Car.
+Pre-conditions =>
+	Windows 11
+	Google Chrome – 110.0.5481.104
+	Windows 11, version 22H2
+	Nacházím se na stránce https://localhost/autobazarDrabek/www/admin.buyout-cars/
+	Pokud není uživatel přihlášený, přihlásí se
+	Role uživatele musí být větší nebo rovna roli „uživatel“
+Testovací kroky =>
+	V tabulce si najdeme nejnovější vůz (1. z vrchu)
+	Klikneme na ikonu očička -> tím se nám zobrazí detail vozu
+	Klikneme na ikonu uložení -> ten nás přesměruje do formuláře pro přidání vozidla
+	Doplníme zbytek dat, které se nevyplnili v TP_001
+	V nabídce obrázků, které byly nahrány při vytváření výkupu, si zvolíme všechny.
+	Přidáme další obrázky v políčku pro nahrání.
+	Nastavíme stav na zveřejněno
+	Klikneme na tlačítko uložit.
+Post-conditions =>
+	Přejdeme na stránku https://localhost/autobazarDrabek/www/cars/detail/59
+Očekávaný výsledek =>
+	Přidání vozu do systému.
+	Nahrání nových obrázků
+	Převedení obrázků ze složky pro výkup do složky auta
+	Natavení u výkupu stav na „již v systému“ a přidělit id pro vůz v systému
+Vstupní data =>
+	Obrázky ze složky „imgData“
+	Karosérie = Combi
+	Barva = Stříbrná metalíza
+	Země původu = Česko
+	STK = 2024/10
