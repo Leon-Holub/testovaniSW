@@ -34,11 +34,18 @@ class testManager
         return dirname($file);
     }
 
+    private static function returnFileContent($fileString)
+    {
+        $file = fopen($fileString, "r");
+        $fileContent = fread($file, filesize($fileString));
+        return $fileContent;
+    }
+
     public static function printFile($fileString)
     {
 
-        $file = fopen($fileString, "r");
-        $fileContent = fread($file, filesize($fileString));
+        //$file = fopen($fileString, "r");
+        $fileContent = self::returnFileContent($fileString);
         $lines = explode("\n", $fileContent);
 
         foreach ($lines as $line) {
@@ -116,10 +123,143 @@ class testManager
             $data["report"] = str_replace("./tests/", "./robotTests/", $dir) . "/report.html";
             $data["robot"] = str_replace("./tests/", "./robotTests/", $dir) . ".robot";
 
+            $pos = strripos($dir, "/");
+            $dir = substr($dir, 0, $pos);
+
+            $dir = str_replace("./tests/", "./robotTests/", $dir);
+
+            $files = scandir($dir, SCANDIR_SORT_DESCENDING);
+            foreach ($files as $file) {
+                if (strpos($file, "TS_") !== false && strpos($file, ".robot")) {
+                    $topVariables = $dir . "/" . $file;
+                }
+            }
+
+            $data["robotTS"] = $topVariables;// . ".robot";//str_replace("./tests/", "./robotTests/", $dir) . ".robot";
+
         }
 
         return $data;
     }
+
+    function getParentsTS($fileName, $robotFile)
+    {
+        if ($fileName == self::INDEX)
+            return [];
+
+        $parentsTS = array();
+        array_push($parentsTS, "./robotTests/main-settings-variables-keywords.robot");
+        array_push($parentsTS, $fileName);
+
+        $dirname = $this->getDir($fileName);
+
+
+        $pos = strripos($dirname, "/");
+        $dirname = substr($dirname, 0, $pos);
+
+
+        while (true) {
+
+            if ($dirname == "./robotTests")
+                break;
+
+            $files = scandir($dirname, SCANDIR_SORT_DESCENDING);
+
+            foreach ($files as $file) {
+                if (strpos($file, "TS_") !== false && strpos($file, ".robot")) {
+                    array_push($parentsTS, $dirname . "/" . $file);
+                }
+            }
+
+            $dirname = substr($dirname, 0, strripos($dirname, "/"));
+        }
+
+        $mainFileContent = self::returnFileContent($robotFile);
+        preg_match_all('/\${(.*?)}/', $mainFileContent, $variablesFromMain);
+        $variablesFromMain = $variablesFromMain[0];
+        $variablesFromMain = array_unique($variablesFromMain);
+
+        echo '<div style="height: 400px; font-size: 12px; line-height: 1rem" class="bg-black text-white overflow-scroll ">';
+        echo "<p class='my-2'>*** Variables ***</p>";
+        foreach ($parentsTS as $parentTS) {
+            $tsContent = self::returnFileContent($parentTS);
+            $tsRows = explode("\n", $tsContent);
+            foreach ($tsRows as $row) {
+                if ($row[0] == "$") {
+                    foreach ($variablesFromMain as $var) {
+                        if (strpos($row, $var) !== false) {
+                            echo "<p class='my-2'>$row</p>";
+                        }
+                    }
+                }
+            }
+        }
+        echo '</div>';
+
+        $mainFileWithoutVars = str_replace($variablesFromMain, "", $mainFileContent);
+        $Keywords = explode("\n", $mainFileWithoutVars);
+        $Keywords = array_unique($Keywords);
+
+        echo '<h4 class="mt-3 mb-0 text-center">Keywords použité v TP</h4>
+              <p class="mt-0 text-center">(Vybané ze všech rodičovských TS)</p>';
+
+        echo '<div style="height: 400px; font-size: 12px; line-height: 1rem" class="bg-black text-white overflow-scroll ">';
+        echo "<p class='my-2'>*** Keywords ***</p>";
+        unset($Keywords[array_search("\n", $Keywords)]);
+        foreach ($Keywords as $key => $keyword) {
+            if (strlen($keyword) == 1) {
+                unset($Keywords[$key]);
+            }
+        }
+
+        foreach ($parentsTS as $parentTS) {
+            $tsContent = self::returnFileContent($parentTS);
+            $keywordsPart = false;
+
+            $stateKeyword = false;
+            $tsRows = explode("\n", $tsContent);
+            foreach ($tsRows as $row) {
+
+                if ($keywordsPart && !$stateKeyword && $row[0] != "$" && $row[0] != " ") {
+                    foreach ($Keywords as $kw) {
+                        $lowerRow = str_replace(" ", "", strtolower($row));
+                        $lowerKw = str_replace(" ", "", strtolower($kw));
+                        if (strpos($lowerRow, $lowerKw) !== false) {
+                            $stateKeyword = true;
+                            break;
+                        }
+                    }
+                }
+
+                if ($row[0] == "$")
+                    continue;
+                elseif ($row[0] == " " && $keywordsPart && $stateKeyword) {
+                    echo "<p class='ms-3 mb-1'>$row</p>";
+                } else if ($keywordsPart && $stateKeyword && strlen($row) == 1) {
+                    echo "<br>";
+                    $stateKeyword = false;
+                } else if ($keywordsPart && $stateKeyword) {
+                    echo "<p class='mb-1'>$row</p>";
+                }
+
+                if (!$keywordsPart && strpos($row, "Keywords") !== false) {
+                    $keywordsPart = true;
+                }
+            }
+            /*
+            foreach ($tsRows as $row) {
+                foreach ($Keywords as $keyword) {
+                    if (strpos($row, $keyword) !== false) {
+                        //echo "<p class='my-2'>$row</p>";
+                    }
+                }
+            }*/
+        }
+
+        echo '</div>';
+        return $variablesFromMain;
+    }
+
 
     function getParents($fileName)
     {
